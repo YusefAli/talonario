@@ -1,0 +1,21 @@
+h1 {
+    text-align:center
+}
+
+body {
+	background-color:whitesmoke;
+}
+
+ul.articles li:not(:last-child) {
+    border-bottom:2px solid #ccc
+}
+
+
+.inamovible{
+    background-color: #EBE9EA;
+    border: 1px solid #D2D2D2;
+    border-radius: 8px 8px 8px 8px;
+    position: inherit;
+    margin-right: 0px;
+    text-align: center;
+}

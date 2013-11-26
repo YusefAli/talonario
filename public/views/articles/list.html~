@@ -1,0 +1,28 @@
+<section data-ng-controller="ArticlesController" data-ng-init="find()">
+<div class="inamovible">
+	<h2>Tienes: {{userTalons.length}} talones seleccionados<button ng-show="userTalons.length > 1" ng-click="crearTalonario(userTalons)">Crear Talonario</button></h2>
+</div>
+<br>
+<br>
+<br>
+<br>
+	<ul class="articles unstyled">
+		<li data-ng-repeat="article in articles">
+			<!--<span>{{article.created | date:'shortDate'}}</span> /
+			<span>{{article.user.name}}</span>-->
+			<div ng-show="userTalons.indexOf(article) == -1">
+				<h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a></h2>
+			
+				<table border="0">
+					<tr>
+						<td><img src="/img/articles/{{article._id}}.jpeg" alt="{{article.title}}" /></td>
+						<td><div>{{article.content}}</div></td>
+		   			<td ng-show="userTalons.indexOf(article) == -1"><button ng-click="addSelectedTalon(article)">Seleccionar</button></td>
+					</tr>
+		 		</table> 			
+			</div>
+		</li>
+	</ul>
+	  
+	<h1 data-ng-hide="userTalons.length == articles.length">Ya tienes todos los talones en tu talonario!!!</h1>
+</section>

@@ -1,0 +1,1143 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/yusef/local/bin/node',
+1 verbose cli   '/home/yusef/local/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.20
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/media/Datos/mean-master',
+5 verbose install   [ 'express',
+5 verbose install     'jade',
+5 verbose install     'mongoose',
+5 verbose install     'connect-mongo',
+5 verbose install     'connect-flash',
+5 verbose install     'crypto',
+5 verbose install     'passport',
+5 verbose install     'passport-local',
+5 verbose install     'passport-facebook',
+5 verbose install     'passport-twitter',
+5 verbose install     'passport-github',
+5 verbose install     'passport-google-oauth',
+5 verbose install     'underscore',
+5 verbose install     'view-helpers',
+5 verbose install     'mean-logger',
+5 verbose install     'forever',
+5 verbose install     'bower',
+5 verbose install     'grunt',
+5 verbose install     'grunt-cli',
+5 verbose install     'grunt-env',
+5 verbose install     'supertest',
+5 verbose install     'should',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-nodemon',
+5 verbose install     'grunt-concurrent',
+5 verbose install     'grunt-mocha-test' ] ]
+6 info preinstall mean@0.1.0
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'connect-mongo@latest', null ]
+9 verbose cache add name=undefined spec="connect-mongo@latest" args=["connect-mongo@latest",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'connect-mongo@latest',
+10 verbose parsed url   path: 'connect-mongo@latest',
+10 verbose parsed url   href: 'connect-mongo@latest' }
+11 verbose cache add name="connect-mongo" spec="latest" args=["connect-mongo","latest"]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'latest',
+12 verbose parsed url   path: 'latest',
+12 verbose parsed url   href: 'latest' }
+13 verbose addNamed [ 'connect-mongo', 'latest' ]
+14 verbose addNamed [ null, null ]
+15 verbose cache add [ 'mongoose@latest', null ]
+16 verbose cache add name=undefined spec="mongoose@latest" args=["mongoose@latest",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'mongoose@latest',
+17 verbose parsed url   path: 'mongoose@latest',
+17 verbose parsed url   href: 'mongoose@latest' }
+18 verbose cache add name="mongoose" spec="latest" args=["mongoose","latest"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'latest',
+19 verbose parsed url   path: 'latest',
+19 verbose parsed url   href: 'latest' }
+20 verbose addNamed [ 'mongoose', 'latest' ]
+21 verbose addNamed [ null, null ]
+22 verbose cache add [ 'connect-flash@latest', null ]
+23 verbose cache add name=undefined spec="connect-flash@latest" args=["connect-flash@latest",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'connect-flash@latest',
+24 verbose parsed url   path: 'connect-flash@latest',
+24 verbose parsed url   href: 'connect-flash@latest' }
+25 verbose cache add name="connect-flash" spec="latest" args=["connect-flash","latest"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'latest',
+26 verbose parsed url   path: 'latest',
+26 verbose parsed url   href: 'latest' }
+27 verbose addNamed [ 'connect-flash', 'latest' ]
+28 verbose addNamed [ null, null ]
+29 verbose cache add [ 'crypto@latest', null ]
+30 verbose cache add name=undefined spec="crypto@latest" args=["crypto@latest",null]
+31 verbose parsed url { protocol: null,
+31 verbose parsed url   slashes: null,
+31 verbose parsed url   auth: null,
+31 verbose parsed url   host: null,
+31 verbose parsed url   port: null,
+31 verbose parsed url   hostname: null,
+31 verbose parsed url   hash: null,
+31 verbose parsed url   search: null,
+31 verbose parsed url   query: null,
+31 verbose parsed url   pathname: 'crypto@latest',
+31 verbose parsed url   path: 'crypto@latest',
+31 verbose parsed url   href: 'crypto@latest' }
+32 verbose cache add name="crypto" spec="latest" args=["crypto","latest"]
+33 verbose parsed url { protocol: null,
+33 verbose parsed url   slashes: null,
+33 verbose parsed url   auth: null,
+33 verbose parsed url   host: null,
+33 verbose parsed url   port: null,
+33 verbose parsed url   hostname: null,
+33 verbose parsed url   hash: null,
+33 verbose parsed url   search: null,
+33 verbose parsed url   query: null,
+33 verbose parsed url   pathname: 'latest',
+33 verbose parsed url   path: 'latest',
+33 verbose parsed url   href: 'latest' }
+34 verbose addNamed [ 'crypto', 'latest' ]
+35 verbose addNamed [ null, null ]
+36 verbose cache add [ 'passport@latest', null ]
+37 verbose cache add name=undefined spec="passport@latest" args=["passport@latest",null]
+38 verbose parsed url { protocol: null,
+38 verbose parsed url   slashes: null,
+38 verbose parsed url   auth: null,
+38 verbose parsed url   host: null,
+38 verbose parsed url   port: null,
+38 verbose parsed url   hostname: null,
+38 verbose parsed url   hash: null,
+38 verbose parsed url   search: null,
+38 verbose parsed url   query: null,
+38 verbose parsed url   pathname: 'passport@latest',
+38 verbose parsed url   path: 'passport@latest',
+38 verbose parsed url   href: 'passport@latest' }
+39 verbose cache add name="passport" spec="latest" args=["passport","latest"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: 'latest',
+40 verbose parsed url   path: 'latest',
+40 verbose parsed url   href: 'latest' }
+41 verbose addNamed [ 'passport', 'latest' ]
+42 verbose addNamed [ null, null ]
+43 silly lockFile 02f15c80-connect-mongo-latest connect-mongo@latest
+44 verbose lock connect-mongo@latest /home/yusef/.npm/02f15c80-connect-mongo-latest.lock
+45 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+46 verbose lock mongoose@latest /home/yusef/.npm/73e949f4-mongoose-latest.lock
+47 silly lockFile feedbc7e-connect-flash-latest connect-flash@latest
+48 verbose lock connect-flash@latest /home/yusef/.npm/feedbc7e-connect-flash-latest.lock
+49 silly lockFile 9984c26f-crypto-latest crypto@latest
+50 verbose lock crypto@latest /home/yusef/.npm/9984c26f-crypto-latest.lock
+51 silly lockFile 771f2547-passport-latest passport@latest
+52 verbose lock passport@latest /home/yusef/.npm/771f2547-passport-latest.lock
+53 verbose cache add [ 'passport-local@latest', null ]
+54 verbose cache add name=undefined spec="passport-local@latest" args=["passport-local@latest",null]
+55 verbose parsed url { protocol: null,
+55 verbose parsed url   slashes: null,
+55 verbose parsed url   auth: null,
+55 verbose parsed url   host: null,
+55 verbose parsed url   port: null,
+55 verbose parsed url   hostname: null,
+55 verbose parsed url   hash: null,
+55 verbose parsed url   search: null,
+55 verbose parsed url   query: null,
+55 verbose parsed url   pathname: 'passport-local@latest',
+55 verbose parsed url   path: 'passport-local@latest',
+55 verbose parsed url   href: 'passport-local@latest' }
+56 verbose cache add name="passport-local" spec="latest" args=["passport-local","latest"]
+57 verbose parsed url { protocol: null,
+57 verbose parsed url   slashes: null,
+57 verbose parsed url   auth: null,
+57 verbose parsed url   host: null,
+57 verbose parsed url   port: null,
+57 verbose parsed url   hostname: null,
+57 verbose parsed url   hash: null,
+57 verbose parsed url   search: null,
+57 verbose parsed url   query: null,
+57 verbose parsed url   pathname: 'latest',
+57 verbose parsed url   path: 'latest',
+57 verbose parsed url   href: 'latest' }
+58 verbose addNamed [ 'passport-local', 'latest' ]
+59 verbose addNamed [ null, null ]
+60 silly lockFile 00a116b3-passport-local-latest passport-local@latest
+61 verbose lock passport-local@latest /home/yusef/.npm/00a116b3-passport-local-latest.lock
+62 verbose cache add [ 'passport-facebook@latest', null ]
+63 verbose cache add name=undefined spec="passport-facebook@latest" args=["passport-facebook@latest",null]
+64 verbose parsed url { protocol: null,
+64 verbose parsed url   slashes: null,
+64 verbose parsed url   auth: null,
+64 verbose parsed url   host: null,
+64 verbose parsed url   port: null,
+64 verbose parsed url   hostname: null,
+64 verbose parsed url   hash: null,
+64 verbose parsed url   search: null,
+64 verbose parsed url   query: null,
+64 verbose parsed url   pathname: 'passport-facebook@latest',
+64 verbose parsed url   path: 'passport-facebook@latest',
+64 verbose parsed url   href: 'passport-facebook@latest' }
+65 verbose cache add name="passport-facebook" spec="latest" args=["passport-facebook","latest"]
+66 verbose parsed url { protocol: null,
+66 verbose parsed url   slashes: null,
+66 verbose parsed url   auth: null,
+66 verbose parsed url   host: null,
+66 verbose parsed url   port: null,
+66 verbose parsed url   hostname: null,
+66 verbose parsed url   hash: null,
+66 verbose parsed url   search: null,
+66 verbose parsed url   query: null,
+66 verbose parsed url   pathname: 'latest',
+66 verbose parsed url   path: 'latest',
+66 verbose parsed url   href: 'latest' }
+67 verbose addNamed [ 'passport-facebook', 'latest' ]
+68 verbose addNamed [ null, null ]
+69 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+70 verbose lock passport-facebook@latest /home/yusef/.npm/82ca5952-passport-facebook-latest.lock
+71 verbose cache add [ 'passport-twitter@latest', null ]
+72 verbose cache add name=undefined spec="passport-twitter@latest" args=["passport-twitter@latest",null]
+73 verbose parsed url { protocol: null,
+73 verbose parsed url   slashes: null,
+73 verbose parsed url   auth: null,
+73 verbose parsed url   host: null,
+73 verbose parsed url   port: null,
+73 verbose parsed url   hostname: null,
+73 verbose parsed url   hash: null,
+73 verbose parsed url   search: null,
+73 verbose parsed url   query: null,
+73 verbose parsed url   pathname: 'passport-twitter@latest',
+73 verbose parsed url   path: 'passport-twitter@latest',
+73 verbose parsed url   href: 'passport-twitter@latest' }
+74 verbose cache add name="passport-twitter" spec="latest" args=["passport-twitter","latest"]
+75 verbose parsed url { protocol: null,
+75 verbose parsed url   slashes: null,
+75 verbose parsed url   auth: null,
+75 verbose parsed url   host: null,
+75 verbose parsed url   port: null,
+75 verbose parsed url   hostname: null,
+75 verbose parsed url   hash: null,
+75 verbose parsed url   search: null,
+75 verbose parsed url   query: null,
+75 verbose parsed url   pathname: 'latest',
+75 verbose parsed url   path: 'latest',
+75 verbose parsed url   href: 'latest' }
+76 verbose addNamed [ 'passport-twitter', 'latest' ]
+77 verbose addNamed [ null, null ]
+78 silly lockFile d5de964c-passport-twitter-latest passport-twitter@latest
+79 verbose lock passport-twitter@latest /home/yusef/.npm/d5de964c-passport-twitter-latest.lock
+80 verbose cache add [ 'passport-github@latest', null ]
+81 verbose cache add name=undefined spec="passport-github@latest" args=["passport-github@latest",null]
+82 verbose parsed url { protocol: null,
+82 verbose parsed url   slashes: null,
+82 verbose parsed url   auth: null,
+82 verbose parsed url   host: null,
+82 verbose parsed url   port: null,
+82 verbose parsed url   hostname: null,
+82 verbose parsed url   hash: null,
+82 verbose parsed url   search: null,
+82 verbose parsed url   query: null,
+82 verbose parsed url   pathname: 'passport-github@latest',
+82 verbose parsed url   path: 'passport-github@latest',
+82 verbose parsed url   href: 'passport-github@latest' }
+83 verbose cache add name="passport-github" spec="latest" args=["passport-github","latest"]
+84 verbose parsed url { protocol: null,
+84 verbose parsed url   slashes: null,
+84 verbose parsed url   auth: null,
+84 verbose parsed url   host: null,
+84 verbose parsed url   port: null,
+84 verbose parsed url   hostname: null,
+84 verbose parsed url   hash: null,
+84 verbose parsed url   search: null,
+84 verbose parsed url   query: null,
+84 verbose parsed url   pathname: 'latest',
+84 verbose parsed url   path: 'latest',
+84 verbose parsed url   href: 'latest' }
+85 verbose addNamed [ 'passport-github', 'latest' ]
+86 verbose addNamed [ null, null ]
+87 silly lockFile 179eab82-passport-github-latest passport-github@latest
+88 verbose lock passport-github@latest /home/yusef/.npm/179eab82-passport-github-latest.lock
+89 verbose cache add [ 'passport-google-oauth@latest', null ]
+90 verbose cache add name=undefined spec="passport-google-oauth@latest" args=["passport-google-oauth@latest",null]
+91 verbose parsed url { protocol: null,
+91 verbose parsed url   slashes: null,
+91 verbose parsed url   auth: null,
+91 verbose parsed url   host: null,
+91 verbose parsed url   port: null,
+91 verbose parsed url   hostname: null,
+91 verbose parsed url   hash: null,
+91 verbose parsed url   search: null,
+91 verbose parsed url   query: null,
+91 verbose parsed url   pathname: 'passport-google-oauth@latest',
+91 verbose parsed url   path: 'passport-google-oauth@latest',
+91 verbose parsed url   href: 'passport-google-oauth@latest' }
+92 verbose cache add name="passport-google-oauth" spec="latest" args=["passport-google-oauth","latest"]
+93 verbose parsed url { protocol: null,
+93 verbose parsed url   slashes: null,
+93 verbose parsed url   auth: null,
+93 verbose parsed url   host: null,
+93 verbose parsed url   port: null,
+93 verbose parsed url   hostname: null,
+93 verbose parsed url   hash: null,
+93 verbose parsed url   search: null,
+93 verbose parsed url   query: null,
+93 verbose parsed url   pathname: 'latest',
+93 verbose parsed url   path: 'latest',
+93 verbose parsed url   href: 'latest' }
+94 verbose addNamed [ 'passport-google-oauth', 'latest' ]
+95 verbose addNamed [ null, null ]
+96 silly lockFile 2c491da3-passport-google-oauth-latest passport-google-oauth@latest
+97 verbose lock passport-google-oauth@latest /home/yusef/.npm/2c491da3-passport-google-oauth-latest.lock
+98 verbose cache add [ 'underscore@latest', null ]
+99 verbose cache add name=undefined spec="underscore@latest" args=["underscore@latest",null]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: 'underscore@latest',
+100 verbose parsed url   path: 'underscore@latest',
+100 verbose parsed url   href: 'underscore@latest' }
+101 verbose cache add name="underscore" spec="latest" args=["underscore","latest"]
+102 verbose parsed url { protocol: null,
+102 verbose parsed url   slashes: null,
+102 verbose parsed url   auth: null,
+102 verbose parsed url   host: null,
+102 verbose parsed url   port: null,
+102 verbose parsed url   hostname: null,
+102 verbose parsed url   hash: null,
+102 verbose parsed url   search: null,
+102 verbose parsed url   query: null,
+102 verbose parsed url   pathname: 'latest',
+102 verbose parsed url   path: 'latest',
+102 verbose parsed url   href: 'latest' }
+103 verbose addNamed [ 'underscore', 'latest' ]
+104 verbose addNamed [ null, null ]
+105 silly lockFile 546e1155-underscore-latest underscore@latest
+106 verbose lock underscore@latest /home/yusef/.npm/546e1155-underscore-latest.lock
+107 verbose cache add [ 'view-helpers@latest', null ]
+108 verbose cache add name=undefined spec="view-helpers@latest" args=["view-helpers@latest",null]
+109 verbose parsed url { protocol: null,
+109 verbose parsed url   slashes: null,
+109 verbose parsed url   auth: null,
+109 verbose parsed url   host: null,
+109 verbose parsed url   port: null,
+109 verbose parsed url   hostname: null,
+109 verbose parsed url   hash: null,
+109 verbose parsed url   search: null,
+109 verbose parsed url   query: null,
+109 verbose parsed url   pathname: 'view-helpers@latest',
+109 verbose parsed url   path: 'view-helpers@latest',
+109 verbose parsed url   href: 'view-helpers@latest' }
+110 verbose cache add name="view-helpers" spec="latest" args=["view-helpers","latest"]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: 'latest',
+111 verbose parsed url   path: 'latest',
+111 verbose parsed url   href: 'latest' }
+112 verbose addNamed [ 'view-helpers', 'latest' ]
+113 verbose addNamed [ null, null ]
+114 silly lockFile e5a0e3a0-view-helpers-latest view-helpers@latest
+115 verbose lock view-helpers@latest /home/yusef/.npm/e5a0e3a0-view-helpers-latest.lock
+116 verbose cache add [ 'mean-logger@latest', null ]
+117 verbose cache add name=undefined spec="mean-logger@latest" args=["mean-logger@latest",null]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: 'mean-logger@latest',
+118 verbose parsed url   path: 'mean-logger@latest',
+118 verbose parsed url   href: 'mean-logger@latest' }
+119 verbose cache add name="mean-logger" spec="latest" args=["mean-logger","latest"]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: 'latest',
+120 verbose parsed url   path: 'latest',
+120 verbose parsed url   href: 'latest' }
+121 verbose addNamed [ 'mean-logger', 'latest' ]
+122 verbose addNamed [ null, null ]
+123 silly lockFile 16dea224-mean-logger-latest mean-logger@latest
+124 verbose lock mean-logger@latest /home/yusef/.npm/16dea224-mean-logger-latest.lock
+125 verbose cache add [ 'forever@latest', null ]
+126 verbose cache add name=undefined spec="forever@latest" args=["forever@latest",null]
+127 verbose parsed url { protocol: null,
+127 verbose parsed url   slashes: null,
+127 verbose parsed url   auth: null,
+127 verbose parsed url   host: null,
+127 verbose parsed url   port: null,
+127 verbose parsed url   hostname: null,
+127 verbose parsed url   hash: null,
+127 verbose parsed url   search: null,
+127 verbose parsed url   query: null,
+127 verbose parsed url   pathname: 'forever@latest',
+127 verbose parsed url   path: 'forever@latest',
+127 verbose parsed url   href: 'forever@latest' }
+128 verbose cache add name="forever" spec="latest" args=["forever","latest"]
+129 verbose parsed url { protocol: null,
+129 verbose parsed url   slashes: null,
+129 verbose parsed url   auth: null,
+129 verbose parsed url   host: null,
+129 verbose parsed url   port: null,
+129 verbose parsed url   hostname: null,
+129 verbose parsed url   hash: null,
+129 verbose parsed url   search: null,
+129 verbose parsed url   query: null,
+129 verbose parsed url   pathname: 'latest',
+129 verbose parsed url   path: 'latest',
+129 verbose parsed url   href: 'latest' }
+130 verbose addNamed [ 'forever', 'latest' ]
+131 verbose addNamed [ null, null ]
+132 silly lockFile fac80c3d-forever-latest forever@latest
+133 verbose lock forever@latest /home/yusef/.npm/fac80c3d-forever-latest.lock
+134 verbose cache add [ 'bower@latest', null ]
+135 verbose cache add name=undefined spec="bower@latest" args=["bower@latest",null]
+136 verbose parsed url { protocol: null,
+136 verbose parsed url   slashes: null,
+136 verbose parsed url   auth: null,
+136 verbose parsed url   host: null,
+136 verbose parsed url   port: null,
+136 verbose parsed url   hostname: null,
+136 verbose parsed url   hash: null,
+136 verbose parsed url   search: null,
+136 verbose parsed url   query: null,
+136 verbose parsed url   pathname: 'bower@latest',
+136 verbose parsed url   path: 'bower@latest',
+136 verbose parsed url   href: 'bower@latest' }
+137 verbose cache add name="bower" spec="latest" args=["bower","latest"]
+138 verbose parsed url { protocol: null,
+138 verbose parsed url   slashes: null,
+138 verbose parsed url   auth: null,
+138 verbose parsed url   host: null,
+138 verbose parsed url   port: null,
+138 verbose parsed url   hostname: null,
+138 verbose parsed url   hash: null,
+138 verbose parsed url   search: null,
+138 verbose parsed url   query: null,
+138 verbose parsed url   pathname: 'latest',
+138 verbose parsed url   path: 'latest',
+138 verbose parsed url   href: 'latest' }
+139 verbose addNamed [ 'bower', 'latest' ]
+140 verbose addNamed [ null, null ]
+141 silly lockFile 09819b10-bower-latest bower@latest
+142 verbose lock bower@latest /home/yusef/.npm/09819b10-bower-latest.lock
+143 verbose cache add [ 'grunt@latest', null ]
+144 verbose cache add name=undefined spec="grunt@latest" args=["grunt@latest",null]
+145 verbose parsed url { protocol: null,
+145 verbose parsed url   slashes: null,
+145 verbose parsed url   auth: null,
+145 verbose parsed url   host: null,
+145 verbose parsed url   port: null,
+145 verbose parsed url   hostname: null,
+145 verbose parsed url   hash: null,
+145 verbose parsed url   search: null,
+145 verbose parsed url   query: null,
+145 verbose parsed url   pathname: 'grunt@latest',
+145 verbose parsed url   path: 'grunt@latest',
+145 verbose parsed url   href: 'grunt@latest' }
+146 verbose cache add name="grunt" spec="latest" args=["grunt","latest"]
+147 verbose parsed url { protocol: null,
+147 verbose parsed url   slashes: null,
+147 verbose parsed url   auth: null,
+147 verbose parsed url   host: null,
+147 verbose parsed url   port: null,
+147 verbose parsed url   hostname: null,
+147 verbose parsed url   hash: null,
+147 verbose parsed url   search: null,
+147 verbose parsed url   query: null,
+147 verbose parsed url   pathname: 'latest',
+147 verbose parsed url   path: 'latest',
+147 verbose parsed url   href: 'latest' }
+148 verbose addNamed [ 'grunt', 'latest' ]
+149 verbose addNamed [ null, null ]
+150 silly lockFile c5c58d45-grunt-latest grunt@latest
+151 verbose lock grunt@latest /home/yusef/.npm/c5c58d45-grunt-latest.lock
+152 verbose cache add [ 'grunt-cli@latest', null ]
+153 verbose cache add name=undefined spec="grunt-cli@latest" args=["grunt-cli@latest",null]
+154 verbose parsed url { protocol: null,
+154 verbose parsed url   slashes: null,
+154 verbose parsed url   auth: null,
+154 verbose parsed url   host: null,
+154 verbose parsed url   port: null,
+154 verbose parsed url   hostname: null,
+154 verbose parsed url   hash: null,
+154 verbose parsed url   search: null,
+154 verbose parsed url   query: null,
+154 verbose parsed url   pathname: 'grunt-cli@latest',
+154 verbose parsed url   path: 'grunt-cli@latest',
+154 verbose parsed url   href: 'grunt-cli@latest' }
+155 verbose cache add name="grunt-cli" spec="latest" args=["grunt-cli","latest"]
+156 verbose parsed url { protocol: null,
+156 verbose parsed url   slashes: null,
+156 verbose parsed url   auth: null,
+156 verbose parsed url   host: null,
+156 verbose parsed url   port: null,
+156 verbose parsed url   hostname: null,
+156 verbose parsed url   hash: null,
+156 verbose parsed url   search: null,
+156 verbose parsed url   query: null,
+156 verbose parsed url   pathname: 'latest',
+156 verbose parsed url   path: 'latest',
+156 verbose parsed url   href: 'latest' }
+157 verbose addNamed [ 'grunt-cli', 'latest' ]
+158 verbose addNamed [ null, null ]
+159 silly lockFile d7e12f40-grunt-cli-latest grunt-cli@latest
+160 verbose lock grunt-cli@latest /home/yusef/.npm/d7e12f40-grunt-cli-latest.lock
+161 verbose cache add [ 'grunt-env@latest', null ]
+162 verbose cache add name=undefined spec="grunt-env@latest" args=["grunt-env@latest",null]
+163 verbose parsed url { protocol: null,
+163 verbose parsed url   slashes: null,
+163 verbose parsed url   auth: null,
+163 verbose parsed url   host: null,
+163 verbose parsed url   port: null,
+163 verbose parsed url   hostname: null,
+163 verbose parsed url   hash: null,
+163 verbose parsed url   search: null,
+163 verbose parsed url   query: null,
+163 verbose parsed url   pathname: 'grunt-env@latest',
+163 verbose parsed url   path: 'grunt-env@latest',
+163 verbose parsed url   href: 'grunt-env@latest' }
+164 verbose cache add name="grunt-env" spec="latest" args=["grunt-env","latest"]
+165 verbose parsed url { protocol: null,
+165 verbose parsed url   slashes: null,
+165 verbose parsed url   auth: null,
+165 verbose parsed url   host: null,
+165 verbose parsed url   port: null,
+165 verbose parsed url   hostname: null,
+165 verbose parsed url   hash: null,
+165 verbose parsed url   search: null,
+165 verbose parsed url   query: null,
+165 verbose parsed url   pathname: 'latest',
+165 verbose parsed url   path: 'latest',
+165 verbose parsed url   href: 'latest' }
+166 verbose addNamed [ 'grunt-env', 'latest' ]
+167 verbose addNamed [ null, null ]
+168 silly lockFile 006cf1f9-grunt-env-latest grunt-env@latest
+169 verbose lock grunt-env@latest /home/yusef/.npm/006cf1f9-grunt-env-latest.lock
+170 verbose cache add [ 'supertest@latest', null ]
+171 verbose cache add name=undefined spec="supertest@latest" args=["supertest@latest",null]
+172 verbose parsed url { protocol: null,
+172 verbose parsed url   slashes: null,
+172 verbose parsed url   auth: null,
+172 verbose parsed url   host: null,
+172 verbose parsed url   port: null,
+172 verbose parsed url   hostname: null,
+172 verbose parsed url   hash: null,
+172 verbose parsed url   search: null,
+172 verbose parsed url   query: null,
+172 verbose parsed url   pathname: 'supertest@latest',
+172 verbose parsed url   path: 'supertest@latest',
+172 verbose parsed url   href: 'supertest@latest' }
+173 verbose cache add name="supertest" spec="latest" args=["supertest","latest"]
+174 verbose parsed url { protocol: null,
+174 verbose parsed url   slashes: null,
+174 verbose parsed url   auth: null,
+174 verbose parsed url   host: null,
+174 verbose parsed url   port: null,
+174 verbose parsed url   hostname: null,
+174 verbose parsed url   hash: null,
+174 verbose parsed url   search: null,
+174 verbose parsed url   query: null,
+174 verbose parsed url   pathname: 'latest',
+174 verbose parsed url   path: 'latest',
+174 verbose parsed url   href: 'latest' }
+175 verbose addNamed [ 'supertest', 'latest' ]
+176 verbose addNamed [ null, null ]
+177 silly lockFile 60f842a2-supertest-latest supertest@latest
+178 verbose lock supertest@latest /home/yusef/.npm/60f842a2-supertest-latest.lock
+179 verbose cache add [ 'should@latest', null ]
+180 verbose cache add name=undefined spec="should@latest" args=["should@latest",null]
+181 verbose parsed url { protocol: null,
+181 verbose parsed url   slashes: null,
+181 verbose parsed url   auth: null,
+181 verbose parsed url   host: null,
+181 verbose parsed url   port: null,
+181 verbose parsed url   hostname: null,
+181 verbose parsed url   hash: null,
+181 verbose parsed url   search: null,
+181 verbose parsed url   query: null,
+181 verbose parsed url   pathname: 'should@latest',
+181 verbose parsed url   path: 'should@latest',
+181 verbose parsed url   href: 'should@latest' }
+182 verbose cache add name="should" spec="latest" args=["should","latest"]
+183 verbose parsed url { protocol: null,
+183 verbose parsed url   slashes: null,
+183 verbose parsed url   auth: null,
+183 verbose parsed url   host: null,
+183 verbose parsed url   port: null,
+183 verbose parsed url   hostname: null,
+183 verbose parsed url   hash: null,
+183 verbose parsed url   search: null,
+183 verbose parsed url   query: null,
+183 verbose parsed url   pathname: 'latest',
+183 verbose parsed url   path: 'latest',
+183 verbose parsed url   href: 'latest' }
+184 verbose addNamed [ 'should', 'latest' ]
+185 verbose addNamed [ null, null ]
+186 silly lockFile b74e4a4c-should-latest should@latest
+187 verbose lock should@latest /home/yusef/.npm/b74e4a4c-should-latest.lock
+188 verbose cache add [ 'grunt-contrib-watch@latest', null ]
+189 verbose cache add name=undefined spec="grunt-contrib-watch@latest" args=["grunt-contrib-watch@latest",null]
+190 verbose parsed url { protocol: null,
+190 verbose parsed url   slashes: null,
+190 verbose parsed url   auth: null,
+190 verbose parsed url   host: null,
+190 verbose parsed url   port: null,
+190 verbose parsed url   hostname: null,
+190 verbose parsed url   hash: null,
+190 verbose parsed url   search: null,
+190 verbose parsed url   query: null,
+190 verbose parsed url   pathname: 'grunt-contrib-watch@latest',
+190 verbose parsed url   path: 'grunt-contrib-watch@latest',
+190 verbose parsed url   href: 'grunt-contrib-watch@latest' }
+191 verbose cache add name="grunt-contrib-watch" spec="latest" args=["grunt-contrib-watch","latest"]
+192 verbose parsed url { protocol: null,
+192 verbose parsed url   slashes: null,
+192 verbose parsed url   auth: null,
+192 verbose parsed url   host: null,
+192 verbose parsed url   port: null,
+192 verbose parsed url   hostname: null,
+192 verbose parsed url   hash: null,
+192 verbose parsed url   search: null,
+192 verbose parsed url   query: null,
+192 verbose parsed url   pathname: 'latest',
+192 verbose parsed url   path: 'latest',
+192 verbose parsed url   href: 'latest' }
+193 verbose addNamed [ 'grunt-contrib-watch', 'latest' ]
+194 verbose addNamed [ null, null ]
+195 silly lockFile 72016001-grunt-contrib-watch-latest grunt-contrib-watch@latest
+196 verbose lock grunt-contrib-watch@latest /home/yusef/.npm/72016001-grunt-contrib-watch-latest.lock
+197 verbose cache add [ 'grunt-contrib-jshint@latest', null ]
+198 verbose cache add name=undefined spec="grunt-contrib-jshint@latest" args=["grunt-contrib-jshint@latest",null]
+199 verbose parsed url { protocol: null,
+199 verbose parsed url   slashes: null,
+199 verbose parsed url   auth: null,
+199 verbose parsed url   host: null,
+199 verbose parsed url   port: null,
+199 verbose parsed url   hostname: null,
+199 verbose parsed url   hash: null,
+199 verbose parsed url   search: null,
+199 verbose parsed url   query: null,
+199 verbose parsed url   pathname: 'grunt-contrib-jshint@latest',
+199 verbose parsed url   path: 'grunt-contrib-jshint@latest',
+199 verbose parsed url   href: 'grunt-contrib-jshint@latest' }
+200 verbose cache add name="grunt-contrib-jshint" spec="latest" args=["grunt-contrib-jshint","latest"]
+201 verbose parsed url { protocol: null,
+201 verbose parsed url   slashes: null,
+201 verbose parsed url   auth: null,
+201 verbose parsed url   host: null,
+201 verbose parsed url   port: null,
+201 verbose parsed url   hostname: null,
+201 verbose parsed url   hash: null,
+201 verbose parsed url   search: null,
+201 verbose parsed url   query: null,
+201 verbose parsed url   pathname: 'latest',
+201 verbose parsed url   path: 'latest',
+201 verbose parsed url   href: 'latest' }
+202 verbose addNamed [ 'grunt-contrib-jshint', 'latest' ]
+203 verbose addNamed [ null, null ]
+204 silly lockFile 23ae4c0c-grunt-contrib-jshint-latest grunt-contrib-jshint@latest
+205 verbose lock grunt-contrib-jshint@latest /home/yusef/.npm/23ae4c0c-grunt-contrib-jshint-latest.lock
+206 verbose cache add [ 'grunt-nodemon@latest', null ]
+207 verbose cache add name=undefined spec="grunt-nodemon@latest" args=["grunt-nodemon@latest",null]
+208 verbose parsed url { protocol: null,
+208 verbose parsed url   slashes: null,
+208 verbose parsed url   auth: null,
+208 verbose parsed url   host: null,
+208 verbose parsed url   port: null,
+208 verbose parsed url   hostname: null,
+208 verbose parsed url   hash: null,
+208 verbose parsed url   search: null,
+208 verbose parsed url   query: null,
+208 verbose parsed url   pathname: 'grunt-nodemon@latest',
+208 verbose parsed url   path: 'grunt-nodemon@latest',
+208 verbose parsed url   href: 'grunt-nodemon@latest' }
+209 verbose cache add name="grunt-nodemon" spec="latest" args=["grunt-nodemon","latest"]
+210 verbose parsed url { protocol: null,
+210 verbose parsed url   slashes: null,
+210 verbose parsed url   auth: null,
+210 verbose parsed url   host: null,
+210 verbose parsed url   port: null,
+210 verbose parsed url   hostname: null,
+210 verbose parsed url   hash: null,
+210 verbose parsed url   search: null,
+210 verbose parsed url   query: null,
+210 verbose parsed url   pathname: 'latest',
+210 verbose parsed url   path: 'latest',
+210 verbose parsed url   href: 'latest' }
+211 verbose addNamed [ 'grunt-nodemon', 'latest' ]
+212 verbose addNamed [ null, null ]
+213 silly lockFile ed662183-grunt-nodemon-latest grunt-nodemon@latest
+214 verbose lock grunt-nodemon@latest /home/yusef/.npm/ed662183-grunt-nodemon-latest.lock
+215 verbose cache add [ 'grunt-concurrent@latest', null ]
+216 verbose cache add name=undefined spec="grunt-concurrent@latest" args=["grunt-concurrent@latest",null]
+217 verbose parsed url { protocol: null,
+217 verbose parsed url   slashes: null,
+217 verbose parsed url   auth: null,
+217 verbose parsed url   host: null,
+217 verbose parsed url   port: null,
+217 verbose parsed url   hostname: null,
+217 verbose parsed url   hash: null,
+217 verbose parsed url   search: null,
+217 verbose parsed url   query: null,
+217 verbose parsed url   pathname: 'grunt-concurrent@latest',
+217 verbose parsed url   path: 'grunt-concurrent@latest',
+217 verbose parsed url   href: 'grunt-concurrent@latest' }
+218 verbose cache add name="grunt-concurrent" spec="latest" args=["grunt-concurrent","latest"]
+219 verbose parsed url { protocol: null,
+219 verbose parsed url   slashes: null,
+219 verbose parsed url   auth: null,
+219 verbose parsed url   host: null,
+219 verbose parsed url   port: null,
+219 verbose parsed url   hostname: null,
+219 verbose parsed url   hash: null,
+219 verbose parsed url   search: null,
+219 verbose parsed url   query: null,
+219 verbose parsed url   pathname: 'latest',
+219 verbose parsed url   path: 'latest',
+219 verbose parsed url   href: 'latest' }
+220 verbose addNamed [ 'grunt-concurrent', 'latest' ]
+221 verbose addNamed [ null, null ]
+222 silly lockFile 50a8c415-grunt-concurrent-latest grunt-concurrent@latest
+223 verbose lock grunt-concurrent@latest /home/yusef/.npm/50a8c415-grunt-concurrent-latest.lock
+224 verbose cache add [ 'grunt-mocha-test@latest', null ]
+225 verbose cache add name=undefined spec="grunt-mocha-test@latest" args=["grunt-mocha-test@latest",null]
+226 verbose parsed url { protocol: null,
+226 verbose parsed url   slashes: null,
+226 verbose parsed url   auth: null,
+226 verbose parsed url   host: null,
+226 verbose parsed url   port: null,
+226 verbose parsed url   hostname: null,
+226 verbose parsed url   hash: null,
+226 verbose parsed url   search: null,
+226 verbose parsed url   query: null,
+226 verbose parsed url   pathname: 'grunt-mocha-test@latest',
+226 verbose parsed url   path: 'grunt-mocha-test@latest',
+226 verbose parsed url   href: 'grunt-mocha-test@latest' }
+227 verbose cache add name="grunt-mocha-test" spec="latest" args=["grunt-mocha-test","latest"]
+228 verbose parsed url { protocol: null,
+228 verbose parsed url   slashes: null,
+228 verbose parsed url   auth: null,
+228 verbose parsed url   host: null,
+228 verbose parsed url   port: null,
+228 verbose parsed url   hostname: null,
+228 verbose parsed url   hash: null,
+228 verbose parsed url   search: null,
+228 verbose parsed url   query: null,
+228 verbose parsed url   pathname: 'latest',
+228 verbose parsed url   path: 'latest',
+228 verbose parsed url   href: 'latest' }
+229 verbose addNamed [ 'grunt-mocha-test', 'latest' ]
+230 verbose addNamed [ null, null ]
+231 silly lockFile 29185e6c-grunt-mocha-test-latest grunt-mocha-test@latest
+232 verbose lock grunt-mocha-test@latest /home/yusef/.npm/29185e6c-grunt-mocha-test-latest.lock
+233 verbose cache add [ 'express@latest', null ]
+234 verbose cache add name=undefined spec="express@latest" args=["express@latest",null]
+235 verbose parsed url { protocol: null,
+235 verbose parsed url   slashes: null,
+235 verbose parsed url   auth: null,
+235 verbose parsed url   host: null,
+235 verbose parsed url   port: null,
+235 verbose parsed url   hostname: null,
+235 verbose parsed url   hash: null,
+235 verbose parsed url   search: null,
+235 verbose parsed url   query: null,
+235 verbose parsed url   pathname: 'express@latest',
+235 verbose parsed url   path: 'express@latest',
+235 verbose parsed url   href: 'express@latest' }
+236 verbose cache add name="express" spec="latest" args=["express","latest"]
+237 verbose parsed url { protocol: null,
+237 verbose parsed url   slashes: null,
+237 verbose parsed url   auth: null,
+237 verbose parsed url   host: null,
+237 verbose parsed url   port: null,
+237 verbose parsed url   hostname: null,
+237 verbose parsed url   hash: null,
+237 verbose parsed url   search: null,
+237 verbose parsed url   query: null,
+237 verbose parsed url   pathname: 'latest',
+237 verbose parsed url   path: 'latest',
+237 verbose parsed url   href: 'latest' }
+238 verbose addNamed [ 'express', 'latest' ]
+239 verbose addNamed [ null, null ]
+240 silly lockFile c30a01ab-express-latest express@latest
+241 verbose lock express@latest /home/yusef/.npm/c30a01ab-express-latest.lock
+242 verbose cache add [ 'jade@latest', null ]
+243 verbose cache add name=undefined spec="jade@latest" args=["jade@latest",null]
+244 verbose parsed url { protocol: null,
+244 verbose parsed url   slashes: null,
+244 verbose parsed url   auth: null,
+244 verbose parsed url   host: null,
+244 verbose parsed url   port: null,
+244 verbose parsed url   hostname: null,
+244 verbose parsed url   hash: null,
+244 verbose parsed url   search: null,
+244 verbose parsed url   query: null,
+244 verbose parsed url   pathname: 'jade@latest',
+244 verbose parsed url   path: 'jade@latest',
+244 verbose parsed url   href: 'jade@latest' }
+245 verbose cache add name="jade" spec="latest" args=["jade","latest"]
+246 verbose parsed url { protocol: null,
+246 verbose parsed url   slashes: null,
+246 verbose parsed url   auth: null,
+246 verbose parsed url   host: null,
+246 verbose parsed url   port: null,
+246 verbose parsed url   hostname: null,
+246 verbose parsed url   hash: null,
+246 verbose parsed url   search: null,
+246 verbose parsed url   query: null,
+246 verbose parsed url   pathname: 'latest',
+246 verbose parsed url   path: 'latest',
+246 verbose parsed url   href: 'latest' }
+247 verbose addNamed [ 'jade', 'latest' ]
+248 verbose addNamed [ null, null ]
+249 silly lockFile 50c7aeb0-jade-latest jade@latest
+250 verbose lock jade@latest /home/yusef/.npm/50c7aeb0-jade-latest.lock
+251 info addNameTag [ 'connect-mongo', 'latest' ]
+252 info addNameTag [ 'mongoose', 'latest' ]
+253 info addNameTag [ 'passport', 'latest' ]
+254 info addNameTag [ 'passport-local', 'latest' ]
+255 info addNameTag [ 'passport-facebook', 'latest' ]
+256 info addNameTag [ 'passport-twitter', 'latest' ]
+257 info addNameTag [ 'passport-github', 'latest' ]
+258 info addNameTag [ 'passport-google-oauth', 'latest' ]
+259 info addNameTag [ 'underscore', 'latest' ]
+260 info addNameTag [ 'view-helpers', 'latest' ]
+261 info addNameTag [ 'mean-logger', 'latest' ]
+262 info addNameTag [ 'forever', 'latest' ]
+263 info addNameTag [ 'bower', 'latest' ]
+264 info addNameTag [ 'grunt', 'latest' ]
+265 info addNameTag [ 'grunt-cli', 'latest' ]
+266 info addNameTag [ 'grunt-env', 'latest' ]
+267 info addNameTag [ 'supertest', 'latest' ]
+268 info addNameTag [ 'should', 'latest' ]
+269 info addNameTag [ 'grunt-contrib-watch', 'latest' ]
+270 info addNameTag [ 'grunt-contrib-jshint', 'latest' ]
+271 info addNameTag [ 'grunt-nodemon', 'latest' ]
+272 info addNameTag [ 'grunt-concurrent', 'latest' ]
+273 info addNameTag [ 'grunt-mocha-test', 'latest' ]
+274 info addNameTag [ 'express', 'latest' ]
+275 info addNameTag [ 'jade', 'latest' ]
+276 info addNameTag [ 'connect-flash', 'latest' ]
+277 verbose url raw connect-mongo
+278 verbose url resolving [ 'https://registry.npmjs.org/', './connect-mongo' ]
+279 verbose url resolved https://registry.npmjs.org/connect-mongo
+280 info trying registry request attempt 1 at 17:09:01
+281 http GET https://registry.npmjs.org/connect-mongo
+282 info addNameTag [ 'crypto', 'latest' ]
+283 verbose url raw mongoose
+284 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+285 verbose url resolved https://registry.npmjs.org/mongoose
+286 info trying registry request attempt 1 at 17:09:01
+287 http GET https://registry.npmjs.org/mongoose
+288 verbose url raw passport
+289 verbose url resolving [ 'https://registry.npmjs.org/', './passport' ]
+290 verbose url resolved https://registry.npmjs.org/passport
+291 info trying registry request attempt 1 at 17:09:01
+292 http GET https://registry.npmjs.org/passport
+293 verbose url raw passport-local
+294 verbose url resolving [ 'https://registry.npmjs.org/', './passport-local' ]
+295 verbose url resolved https://registry.npmjs.org/passport-local
+296 info trying registry request attempt 1 at 17:09:01
+297 http GET https://registry.npmjs.org/passport-local
+298 verbose url raw passport-facebook
+299 verbose url resolving [ 'https://registry.npmjs.org/', './passport-facebook' ]
+300 verbose url resolved https://registry.npmjs.org/passport-facebook
+301 info trying registry request attempt 1 at 17:09:01
+302 http GET https://registry.npmjs.org/passport-facebook
+303 verbose url raw passport-twitter
+304 verbose url resolving [ 'https://registry.npmjs.org/', './passport-twitter' ]
+305 verbose url resolved https://registry.npmjs.org/passport-twitter
+306 info trying registry request attempt 1 at 17:09:01
+307 http GET https://registry.npmjs.org/passport-twitter
+308 verbose url raw passport-github
+309 verbose url resolving [ 'https://registry.npmjs.org/', './passport-github' ]
+310 verbose url resolved https://registry.npmjs.org/passport-github
+311 info trying registry request attempt 1 at 17:09:01
+312 http GET https://registry.npmjs.org/passport-github
+313 verbose url raw passport-google-oauth
+314 verbose url resolving [ 'https://registry.npmjs.org/', './passport-google-oauth' ]
+315 verbose url resolved https://registry.npmjs.org/passport-google-oauth
+316 info trying registry request attempt 1 at 17:09:01
+317 http GET https://registry.npmjs.org/passport-google-oauth
+318 verbose url raw underscore
+319 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+320 verbose url resolved https://registry.npmjs.org/underscore
+321 info trying registry request attempt 1 at 17:09:01
+322 http GET https://registry.npmjs.org/underscore
+323 verbose url raw view-helpers
+324 verbose url resolving [ 'https://registry.npmjs.org/', './view-helpers' ]
+325 verbose url resolved https://registry.npmjs.org/view-helpers
+326 info trying registry request attempt 1 at 17:09:01
+327 http GET https://registry.npmjs.org/view-helpers
+328 verbose url raw mean-logger
+329 verbose url resolving [ 'https://registry.npmjs.org/', './mean-logger' ]
+330 verbose url resolved https://registry.npmjs.org/mean-logger
+331 info trying registry request attempt 1 at 17:09:01
+332 http GET https://registry.npmjs.org/mean-logger
+333 verbose url raw forever
+334 verbose url resolving [ 'https://registry.npmjs.org/', './forever' ]
+335 verbose url resolved https://registry.npmjs.org/forever
+336 info trying registry request attempt 1 at 17:09:01
+337 http GET https://registry.npmjs.org/forever
+338 verbose url raw bower
+339 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+340 verbose url resolved https://registry.npmjs.org/bower
+341 info trying registry request attempt 1 at 17:09:01
+342 http GET https://registry.npmjs.org/bower
+343 verbose url raw grunt
+344 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+345 verbose url resolved https://registry.npmjs.org/grunt
+346 info trying registry request attempt 1 at 17:09:01
+347 http GET https://registry.npmjs.org/grunt
+348 verbose url raw grunt-cli
+349 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+350 verbose url resolved https://registry.npmjs.org/grunt-cli
+351 info trying registry request attempt 1 at 17:09:01
+352 http GET https://registry.npmjs.org/grunt-cli
+353 verbose url raw grunt-env
+354 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-env' ]
+355 verbose url resolved https://registry.npmjs.org/grunt-env
+356 info trying registry request attempt 1 at 17:09:01
+357 http GET https://registry.npmjs.org/grunt-env
+358 verbose url raw supertest
+359 verbose url resolving [ 'https://registry.npmjs.org/', './supertest' ]
+360 verbose url resolved https://registry.npmjs.org/supertest
+361 info trying registry request attempt 1 at 17:09:01
+362 http GET https://registry.npmjs.org/supertest
+363 verbose url raw should
+364 verbose url resolving [ 'https://registry.npmjs.org/', './should' ]
+365 verbose url resolved https://registry.npmjs.org/should
+366 info trying registry request attempt 1 at 17:09:01
+367 http GET https://registry.npmjs.org/should
+368 verbose url raw grunt-contrib-watch
+369 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-watch' ]
+370 verbose url resolved https://registry.npmjs.org/grunt-contrib-watch
+371 info trying registry request attempt 1 at 17:09:01
+372 http GET https://registry.npmjs.org/grunt-contrib-watch
+373 verbose url raw grunt-contrib-jshint
+374 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-jshint' ]
+375 verbose url resolved https://registry.npmjs.org/grunt-contrib-jshint
+376 info trying registry request attempt 1 at 17:09:01
+377 http GET https://registry.npmjs.org/grunt-contrib-jshint
+378 verbose url raw grunt-nodemon
+379 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-nodemon' ]
+380 verbose url resolved https://registry.npmjs.org/grunt-nodemon
+381 info trying registry request attempt 1 at 17:09:01
+382 http GET https://registry.npmjs.org/grunt-nodemon
+383 verbose url raw grunt-concurrent
+384 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-concurrent' ]
+385 verbose url resolved https://registry.npmjs.org/grunt-concurrent
+386 info trying registry request attempt 1 at 17:09:01
+387 http GET https://registry.npmjs.org/grunt-concurrent
+388 verbose url raw grunt-mocha-test
+389 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-mocha-test' ]
+390 verbose url resolved https://registry.npmjs.org/grunt-mocha-test
+391 info trying registry request attempt 1 at 17:09:01
+392 http GET https://registry.npmjs.org/grunt-mocha-test
+393 verbose url raw express
+394 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+395 verbose url resolved https://registry.npmjs.org/express
+396 info trying registry request attempt 1 at 17:09:01
+397 http GET https://registry.npmjs.org/express
+398 verbose url raw jade
+399 verbose url resolving [ 'https://registry.npmjs.org/', './jade' ]
+400 verbose url resolved https://registry.npmjs.org/jade
+401 info trying registry request attempt 1 at 17:09:01
+402 http GET https://registry.npmjs.org/jade
+403 verbose url raw connect-flash
+404 verbose url resolving [ 'https://registry.npmjs.org/', './connect-flash' ]
+405 verbose url resolved https://registry.npmjs.org/connect-flash
+406 info trying registry request attempt 1 at 17:09:01
+407 http GET https://registry.npmjs.org/connect-flash
+408 verbose url raw crypto
+409 verbose url resolving [ 'https://registry.npmjs.org/', './crypto' ]
+410 verbose url resolved https://registry.npmjs.org/crypto
+411 info trying registry request attempt 1 at 17:09:01
+412 http GET https://registry.npmjs.org/crypto
+413 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+414 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+415 info trying registry request attempt 2 at 17:09:11
+416 http GET https://registry.npmjs.org/passport-google-oauth
+417 info trying registry request attempt 2 at 17:09:11
+418 http GET https://registry.npmjs.org/grunt
+419 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+420 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+421 info trying registry request attempt 3 at 17:10:11
+422 http GET https://registry.npmjs.org/passport-google-oauth
+423 info trying registry request attempt 3 at 17:10:11
+424 http GET https://registry.npmjs.org/grunt
+425 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+426 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+427 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+428 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+429 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+430 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+431 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+432 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+433 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+434 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+435 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+436 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+437 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+438 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+439 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+440 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+441 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+442 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+443 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+444 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+445 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+446 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+447 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+448 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+449 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=read ECONNRESET
+450 info trying registry request attempt 2 at 17:14:10
+451 http GET https://registry.npmjs.org/connect-mongo
+452 info trying registry request attempt 2 at 17:14:11
+453 http GET https://registry.npmjs.org/jade
+454 info trying registry request attempt 2 at 17:14:11
+455 http GET https://registry.npmjs.org/supertest
+456 info trying registry request attempt 2 at 17:14:11
+457 http GET https://registry.npmjs.org/underscore
+458 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+459 info trying registry request attempt 2 at 17:14:12
+460 http GET https://registry.npmjs.org/mean-logger
+461 info trying registry request attempt 2 at 17:14:12
+462 http GET https://registry.npmjs.org/crypto
+463 info trying registry request attempt 2 at 17:14:12
+464 http GET https://registry.npmjs.org/passport-twitter
+465 info trying registry request attempt 2 at 17:14:12
+466 http GET https://registry.npmjs.org/grunt-contrib-watch
+467 info trying registry request attempt 2 at 17:14:13
+468 http GET https://registry.npmjs.org/express
+469 info trying registry request attempt 2 at 17:14:13
+470 http GET https://registry.npmjs.org/passport
+471 info trying registry request attempt 2 at 17:14:14
+472 http GET https://registry.npmjs.org/grunt-env
+473 info trying registry request attempt 2 at 17:14:14
+474 http GET https://registry.npmjs.org/should
+475 info trying registry request attempt 2 at 17:14:14
+476 http GET https://registry.npmjs.org/grunt-nodemon
+477 info trying registry request attempt 2 at 17:14:14
+478 http GET https://registry.npmjs.org/bower
+479 info trying registry request attempt 2 at 17:14:14
+480 http GET https://registry.npmjs.org/passport-facebook
+481 info trying registry request attempt 2 at 17:14:15
+482 http GET https://registry.npmjs.org/grunt-cli
+483 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=socket hang up
+484 info trying registry request attempt 2 at 17:14:15
+485 http GET https://registry.npmjs.org/connect-flash
+486 info trying registry request attempt 2 at 17:14:15
+487 http GET https://registry.npmjs.org/view-helpers
+488 info trying registry request attempt 2 at 17:14:15
+489 http GET https://registry.npmjs.org/grunt-mocha-test
+490 info trying registry request attempt 2 at 17:14:16
+491 http GET https://registry.npmjs.org/mongoose
+492 info trying registry request attempt 2 at 17:14:16
+493 http GET https://registry.npmjs.org/passport-local
+494 info trying registry request attempt 2 at 17:14:16
+495 http GET https://registry.npmjs.org/grunt-contrib-jshint
+496 info trying registry request attempt 2 at 17:14:16
+497 http GET https://registry.npmjs.org/passport-github
+498 info trying registry request attempt 2 at 17:14:17
+499 http GET https://registry.npmjs.org/grunt-concurrent
+500 info trying registry request attempt 2 at 17:14:17
+501 http GET https://registry.npmjs.org/forever
+502 info trying registry request attempt 3 at 17:15:11
+503 http GET https://registry.npmjs.org/underscore
+504 silly lockFile c5c58d45-grunt-latest grunt@latest
+505 silly lockFile c5c58d45-grunt-latest grunt@latest
+506 error network tunneling socket could not be established, cause=read ECONNRESET
+506 error network This is most likely not a problem with npm itself
+506 error network and is related to network connectivity.
+506 error network In most cases you are behind a proxy or have bad network settings.
+506 error network
+506 error network If you are behind a proxy, please make sure that the
+506 error network 'proxy' config is set properly.  See: 'npm help config'
+507 error System Linux 3.8.0-33-generic
+508 error command "/home/yusef/local/bin/node" "/home/yusef/local/bin/npm" "install"
+509 error cwd /media/Datos/mean-master
+510 error node -v v0.10.20
+511 error npm -v 1.3.11
+512 error code ECONNRESET
+513 verbose exit [ 1, true ]

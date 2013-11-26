@@ -1,0 +1,30 @@
+//Articles service used for articles REST endpoint
+angular.module('mean.articles').factory("Articles", ['$resource', function($resource) {
+    return $resource('articles/:articleId', {
+        articleId: '@_id'
+    }, {
+        update: {
+            method: 'PUT'
+        }
+    });
+}]);
+
+
+angular.module('mean.articles').factory('UserTalons', function() {
+    var userTalons = [];
+    var itemsService = {};
+    
+    itemsService.add = function(item) {
+        userTalons.push(item);
+    };
+    
+    itemsService.list = function() {
+        return items;
+    };
+    
+	 itemsService.count = function() {
+        return userTalons.length;
+    };
+    
+    return itemsService;
+});
