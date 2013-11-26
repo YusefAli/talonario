@@ -1,5 +1,5 @@
 {
-    "db": "mongodb://localhost/mean",
+    "db": "mongodb://talon:04051984@ds053828.mongolab.com:53828/heroku_app19828412",
     "app": {
         "name": "MEAN - A Modern Stack - Production"
     },
