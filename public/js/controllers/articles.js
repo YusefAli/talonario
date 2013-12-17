@@ -1,7 +1,8 @@
-angular.module('mean.articles').controller('ArticlesController', ['$scope', '$routeParams', '$location', 'Global', 'Articles', function ($scope, $routeParams, $location, Global, Articles) {
+angular.module('mean.articles').controller('ArticlesController', ['$scope', '$routeParams', '$location', 'Global', 'Talonarios', 'Articles', function ($scope, $routeParams, $location, Global, Talonarios, Articles) {
     $scope.global = Global;
 
     $scope.create = function() {
+ 			console.log('create....')
         var article = new Articles({
             title: this.title,
             content: this.content
@@ -9,18 +10,25 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
         article.$save(function(response) {
             $location.path("articles/" + response._id);
         });
-
         this.title = "";
         this.content = "";
+        
     };
 
-    $scope.remove = function(article) {
-        article.$remove();  
 
-        for (var i in $scope.articles) {
-            if ($scope.articles[i] == article) {
-                $scope.articles.splice(i, 1);
+    $scope.remove = function(article) {
+        if (article) {
+            article.$remove();
+
+            for (var i in $scope.articles) {
+                if ($scope.articles[i] == article) {
+                    $scope.articles.splice(i, 1);
+                }
             }
+        }
+        else {
+            $scope.article.$remove();
+            $location.path('articles');
         }
     };
 
@@ -38,7 +46,14 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
 
     $scope.find = function() {
         Articles.query(function(articles) {
+        	
             $scope.articles = articles;
+            if (Global.user.talonario) {
+            	$scope.userTalons = Global.user.talonario.talones;
+        		}
+        		else {
+            	$scope.userTalons = [];
+            }
         });
     };
 
@@ -49,22 +64,23 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
             $scope.article = article;
         });
     };
+
+    $scope.tags = ["popular","amor","picante","divertido"];
+    $scope.filters = { };
+
     
-    $scope.checkItems = function () {
-   	var i;
-  		for (i = 0; i < arr_to_be_checked; i++) {
-    		data[arr_to_be_checked[i]].checked = true;
-  		} 
-	};
-
-    $scope.userTalons = [];
-
-    $scope.addSelectedTalon=function(article){
+     $scope.addSelectedTalon = function(article){
             $scope.userTalons.push(article);
 	        };
 	        
-     $scope.crearTalonario=function(userTalons){
-      	 $location.path('talonario');
+	  $scope.crearTalonario = function(){
+     	  var talonario = new Talonarios({
+            talones: $scope.userTalons
+        });
+        console.log("talonario",JSON.stringify(talonario))
+        talonario.$save(function(response) {
+            $location.path("talonarios/" + response._id);
+        });
      };
-    
+   
 }]);

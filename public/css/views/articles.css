@@ -10,12 +10,8 @@ ul.articles li:not(:last-child) {
     border-bottom:2px solid #ccc
 }
 
-
-.inamovible{
-    background-color: #EBE9EA;
+.contador{
+    background-color: #F0E68C;
     border: 1px solid #D2D2D2;
     border-radius: 8px 8px 8px 8px;
-    position: fixed;
-    margin-right: 0px;
-    text-align: center;
 }

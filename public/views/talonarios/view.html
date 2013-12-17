@@ -1,0 +1,50 @@
+<section data-ng-controller="TalonariosController" data-ng-init="findOne()">
+
+
+				<!--<ul class="articles unstyled">
+					<li data-ng-repeat="talon in talonario.talones">
+						-->
+
+					 <div carousel interval="3000">
+				      <div slide ng-repeat="slide in talonario.talones" active="slide.active">
+				        <img src="/img/articles/{{slide._id}}{{slide.image}}" alt="{{slide.title}}"  style="margin: auto;">
+				        <div class="carousel-caption">
+				          <h4>Talón {{$index}}</h4>
+				          <p>{{slide.tittle}}</p>
+				          <p>{{slide.content}}</p>
+				        </div>
+				      </div>
+				    </div>
+
+				    <p><a class="btn btn-success btn-large" ng-click="openBackWindow('/talonarios/pdf/'+talonario._id,'Talonario PDF')">Descargar Talonario ¡GRATIS!</a></p>
+
+				    <p><a class="btn btn-success btn-large" ng-click="openPayPalWindow(talonario._id)">
+						Te lo enviamos a casa por 9,90 Euros?
+				    	<img src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif" alt="{{slide.title}}"  style="margin: auto;">
+				    </a></p>
+
+				    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+						<input name="cmd" value="_cart" type="hidden"> 
+						<input name="upload" value="1" type="hidden"> 
+						<input name="business" value="yusef.ali.garcia-facilitator@gmail.com " type="hidden">
+						<input name="shopping_url" value="http://localhost:3000" type="hidden">
+						<input name="currency_code" value="EUR" type="hidden">
+						<input name="return_url" value="http://localhost:3000/paypal/OK" type="hidden">
+						<input name="notify_url" value="http://localhost:3000/paypal" type="hidden">
+						<input name="rm" value="2" type="hidden">
+						<input name="item_number_1" value="{{talonario._id}}" type="hidden">
+						<input name="item_name_1" value="Talonario Impreso" type="hidden"> 
+						<input name="amount_1" value="9.90" type="hidden"> 
+						<input name="quantity_1" value="1" type="hidden"> 
+						<input value="PayPal SandBox" type="submit"> 
+					</form>
+
+					<!--<table border="0">
+							<tr>
+								<td><img class="img-thumbnail" src="http://res.cloudinary.com/hn9rn0xhn/image/upload/w_200,h_100/{{talon._id}}.jpg" alt="{{talon.title}}" /></td>
+								<td><div>{{talon.content}}</div></td>
+							</tr>
+				 		</table> 	-->
+						
+				</ul>	
+</section>

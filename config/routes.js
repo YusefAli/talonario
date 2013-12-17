@@ -67,9 +67,31 @@ module.exports = function(app, passport, auth) {
     app.get('/articles/:articleId', articles.show);
     app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
     app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
-
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
+    
+    //save image
+    app.post('/saveImage', auth.requiresLogin, articles.saveImage);
+    
+    //Talonario Routes
+    var talonarios = require('../app/controllers/talonarios');
+    app.get('/talonarios', talonarios.all);
+    app.post('/talonarios', auth.requiresLogin, talonarios.create);
+    app.get('/talonarios/pdf/:talonarioId', auth.requiresLogin, talonarios.pdf);
+    app.get('/talonarios/:talonarioId', talonarios.show);
+    app.put('/talonarios/:talonarioId', auth.requiresLogin, auth.article.hasAuthorization, talonarios.update);
+    app.del('/talonarios/:talonarioId', auth.requiresLogin, auth.article.hasAuthorization, talonarios.destroy);
+
+    //Paypal
+    app.get('/paypal', talonarios.paypal);
+    app.get('/paypal/OK', talonarios.paypalOK);
+    app.post('/paypal', talonarios.paypal);
+    app.post('/paypal/OK', talonarios.paypalOK);
+
+     //Finish with setting up the talonarioId param
+    app.param('talonarioId', talonarios.talonario);
+
+    
 
     //Home route
     var index = require('../app/controllers/index');

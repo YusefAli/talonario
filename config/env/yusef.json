@@ -1,0 +1,26 @@
+{
+    "db": "mongodb://localhost/talon",
+    "app": {
+        "name": "MEAN - A Modern Stack - Development"
+    },
+    "facebook": {
+        "clientID": "APP_ID",
+        "clientSecret": "APP_SECRET",
+        "callbackURL": "http://localhost:3000/auth/facebook/callback"
+    },
+    "twitter": {
+        "clientID": "l380NGoC2i00oFqVxNZGQ",
+        "clientSecret": "78KbHXWpUHCHfSPmvkKxmPRJwcBgye1E6IaRn3K8vAA",
+        "callbackURL": "http://localhost:3000/auth/twitter/callback"
+    },
+    "github": {
+        "clientID": "APP_ID",
+        "clientSecret": "APP_SECRET",
+        "callbackURL": "http://localhost:3000/auth/github/callback"
+    },
+    "google": {
+        "clientID": "APP_ID",
+        "clientSecret": "APP_SECRET",
+        "callbackURL": "http://localhost:3000/auth/google/callback"
+    }
+}

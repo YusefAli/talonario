@@ -14,8 +14,17 @@ window.app.config(['$routeProvider',
         when('/articles/:articleId', {
             templateUrl: 'views/articles/view.html'
         }).
+        when('/talonarios/:talonarioId', {
+            templateUrl: 'views/talonarios/view.html'
+        }).  
+        when('/talonarios', {
+            templateUrl: 'views/talonarios/list.html'
+        }).       
         when('/', {
             templateUrl: 'views/index.html'
+        }).
+        when('/paypal/OK', {
+            templateUrl: 'views/talonarios/paypalOK.html'
         }).
         otherwise({
             redirectTo: '/'

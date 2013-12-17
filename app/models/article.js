@@ -24,10 +24,20 @@ var ArticleSchema = new Schema({
         default: '',
         trim: true
     },
+    image: {
+        type: String,
+        default: 'undefined.jpg',
+        trim: true
+    },
     user: {
         type: Schema.ObjectId,
         ref: 'User'
-    }
+    },
+    tags: [{
+        type: String,
+        default: '',
+        trim: true
+    }]
 });
 
 /**
@@ -44,7 +54,10 @@ ArticleSchema.statics = {
     load: function(id, cb) {
         this.findOne({
             _id: id
-        }).populate('user', 'name username').exec(cb);
+        }).populate('user', 'name username talonario').exec(cb);
+    },
+    imageUrl: function(id) {
+        cloudinary.image("{{article._id}}", {width: 100, height: 100, crop: "fill"});
     }
 };
 

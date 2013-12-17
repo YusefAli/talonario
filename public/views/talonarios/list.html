@@ -1,0 +1,19 @@
+<section data-ng-controller="TalonariosController" data-ng-init="find()">
+
+	<ul class="articles unstyled">
+		<li data-ng-repeat="talonario in talonarios">
+				<h2><a data-ng-href="#!/talonarios/{{talonario._id}}">{{talonario.created | date:'longDate'}}</a></h2>
+				<ul class="articles unstyled">
+					<li data-ng-repeat="talon in talonario.talones">
+						<table border="0">
+							<tr>
+								<td><img class="img-thumbnail" src="http://res.cloudinary.com/hn9rn0xhn/image/upload/w_200,h_100/{{talon._id}}.jpg" alt="{{talon.title}}" /></td>
+								<td><div>{{talon.content}}</div></td>
+							</tr>
+				 		</table> 	
+					</li>	
+				</ul>		
+		</li>
+	</ul>
+
+</section>

@@ -51,6 +51,7 @@ exports.session = function(req, res) {
  */
 exports.create = function(req, res) {
     var user = new User(req.body);
+    user.talonario = null;
 
     user.provider = 'local';
     user.save(function(err) {
@@ -64,6 +65,19 @@ exports.create = function(req, res) {
             if (err) return next(err);
             return res.redirect('/');
         });
+    });
+};
+
+/**
+ * Update user
+ */
+exports.update = function(req, res) {
+   var user = req.user;
+
+    user = _.extend(user, req.body);
+
+    user.save(function(err) {
+        res.jsonp(user);
     });
 };
 

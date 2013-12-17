@@ -2,9 +2,12 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     $scope.global = Global;
 
     $scope.menu = [{
-        "title": "Talones",
+        "title": "Crear Talonario",
         "link": "articles"
-    }, {
+    },{
+        "title": "Mis Talonarios",
+        "link": "talonarios"
+    },{
         "title": "Crea tu propio Talón",
         "link": "articles/create"
     }];

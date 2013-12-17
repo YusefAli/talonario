@@ -3,6 +3,8 @@
  */
 var mongoose = require('mongoose'),
     Article = mongoose.model('Article'),
+    cloudinary = require('cloudinary'),
+    fs = require('fs');
     _ = require('underscore');
 
 
@@ -24,7 +26,10 @@ exports.article = function(req, res, next, id) {
 exports.create = function(req, res) {
     var article = new Article(req.body);
     article.user = req.user;
+    article.title = req.body.title;
+    article.content = req.body.content; 
 
+    
     article.save(function(err) {
         if (err) {
             return res.send('users/signup', {
@@ -32,9 +37,50 @@ exports.create = function(req, res) {
                 article: article
             });
         } else {
-            res.jsonp(article);
+            return article;
+           // res.jsonp(article);
         }
     });
+};
+
+
+/**
+ * saveImage
+ */
+exports.saveImage = function(req, res) {
+     var article = new Article(req.body);
+    article.user = req.user;
+   // console.log(res.jsonp(req.body));
+    article.title = req.body.title;
+    article.content = req.body.content; 
+    article.tags = req.body.tags;
+    article.image = req.files.file.name;
+
+
+    
+    article.save(function(err) {
+        if (err) {
+            return res.send('users/signup', {
+                errors: err.errors,
+                article: article
+            });
+        } else {
+            console.log("article saved",article._id);
+            // set where the file should actually exists - in this case it is in the "images" directory
+            var target_path = './public/img/articles/' +article._id+article.image;
+            fs.readFile(req.files.file.path, function (err, data) {
+              fs.writeFile(target_path, data, function (err) {
+                res.redirect("/#!/articles/"+ article._id);
+              });
+            });
+
+            //cloudinary.uploader.upload(req.files.file.path,
+              //                     function(result) { console.log(result);},{public_id : article._id, format : "jpg"});
+           // res.redirect("/#!/articles/"+ article._id);
+        }
+    });
+   
+            
 };
 
 /**

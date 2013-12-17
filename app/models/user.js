@@ -18,6 +18,10 @@ var UserSchema = new Schema({
         type: String,
         unique: true
     },
+    talonario: {
+        type: Schema.ObjectId,
+        ref: 'Talonario'
+    },
     provider: String,
     hashed_password: String,
     salt: String,
