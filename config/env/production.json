@@ -1,16 +1,16 @@
 {
-    "db": "mongodb://talon:04051984@ds053828.mongolab.com:53828/heroku_app19828412",
+    "db": "mongodb://talon:04051984@ds031319.mongolab.com:31319/talonario",
     "app": {
         "name": "MEAN - A Modern Stack - Production"
     },
     "facebook": {
-        "clientID": "APP_ID",
-        "clientSecret": "APP_SECRET",
+        "clientID": "1422862261287407",
+        "clientSecret": "3b746a32b7793c7b238268bfb0176127",
         "callbackURL": "http://localhost:3000/auth/facebook/callback"
     },
     "twitter": {
-        "clientID": "CONSUMER_KEY",
-        "clientSecret": "CONSUMER_SECRET",
+        "clientID": "l380NGoC2i00oFqVxNZGQ",
+        "clientSecret": "78KbHXWpUHCHfSPmvkKxmPRJwcBgye1E6IaRn3K8vAA",
         "callbackURL": "http://localhost:3000/auth/twitter/callback"
     },
     "github": {
@@ -19,8 +19,8 @@
         "callbackURL": "http://localhost:3000/auth/github/callback"
     },
     "google": {
-        "clientID": "APP_ID",
-        "clientSecret": "APP_SECRET",
+        "clientID": "939747319382.apps.googleusercontent.com",
+        "clientSecret": "ndu5p_9WbfyCOXieamBOg29n",
         "callbackURL": "http://localhost:3000/auth/google/callback"
     }
 }
