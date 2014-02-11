@@ -1,11 +1,11 @@
 {
     "db": "mongodb://localhost/talon",
     "app": {
-        "name": "MEAN - A Modern Stack - Development"
+        "name": "eTalonario.com - Crea tus propios talonarios de amor..."
     },
     "facebook": {
-        "clientID": "APP_ID",
-        "clientSecret": "APP_SECRET",
+        "clientID": "1422862261287407",
+        "clientSecret": "3b746a32b7793c7b238268bfb0176127",
         "callbackURL": "http://localhost:3000/auth/facebook/callback"
     },
     "twitter": {
@@ -19,8 +19,8 @@
         "callbackURL": "http://localhost:3000/auth/github/callback"
     },
     "google": {
-        "clientID": "APP_ID",
-        "clientSecret": "APP_SECRET",
+        "clientID": "939747319382.apps.googleusercontent.com",
+        "clientSecret": "ndu5p_9WbfyCOXieamBOg29n",
         "callbackURL": "http://localhost:3000/auth/google/callback"
     }
 }

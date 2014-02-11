@@ -57,9 +57,9 @@ angular.module('mean.articles').controller('TalonariosController', ['$scope', '$
 	};
 
     $scope.openPayPalWindow = function (talonarioId){
-        var url ="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XZ76JHXAGBCSE";
+        //var url ="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XZ76JHXAGBCSE";
         
-        //var url ="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=A64UZTVC8HQ6G&lc=ES&item_name=Talonario%20Impreso&item_number="+talonarioId+"&amount=0%2e00&currency_code=EUR&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted";
+        var url ="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=A64UZTVC8HQ6G&lc=ES&item_name=Talonario%20Impreso&item_number="+talonarioId+"&amount=10%2e00&currency_code=EUR&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted";
          $scope.openBackWindow(url,"paypal")
       };
 

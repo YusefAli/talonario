@@ -26,6 +26,9 @@ window.app.config(['$routeProvider',
         when('/paypal/OK', {
             templateUrl: 'views/talonarios/paypalOK.html'
         }).
+        when('/saveImage', {
+            templateUrl: 'views/articles/view.html'
+        }).
         otherwise({
             redirectTo: '/'
         });

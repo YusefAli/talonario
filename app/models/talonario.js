@@ -24,6 +24,11 @@ var TalonarioSchema = new Schema({
         default: 'Ultimo Talonario creado',
         trim: true
     },
+    state: {
+        type: String,
+        default: 'INI',
+        trim: true
+    },
     user: {
         type: Schema.ObjectId,
         ref: 'User'

@@ -51,8 +51,6 @@ exports.session = function(req, res) {
  */
 exports.create = function(req, res) {
     var user = new User(req.body);
-    user.talonario = null;
-
     user.provider = 'local';
     user.save(function(err) {
         if (err) {
@@ -104,10 +102,11 @@ exports.me = function(req, res) {
  * Find user by id
  */
 exports.user = function(req, res, next, id) {
+        console.log('findOne USER');
     User
         .findOne({
             _id: id
-        })
+        }).populate('talonario').populate('talonario.talones')
         .exec(function(err, user) {
             if (err) return next(err);
             if (!user) return next(new Error('Failed to load User ' + id));

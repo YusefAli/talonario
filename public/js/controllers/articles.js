@@ -15,7 +15,6 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
         
     };
 
-
     $scope.remove = function(article) {
         if (article) {
             article.$remove();
@@ -46,13 +45,22 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
 
     $scope.find = function() {
         Articles.query(function(articles) {
-        	
+            $scope.userTalons = [];
             $scope.articles = articles;
-            if (Global.user.talonario) {
-            	$scope.userTalons = Global.user.talonario.talones;
-        		}
-        		else {
-            	$scope.userTalons = [];
+            $scope.totalPrice = 0;
+
+            //recojo los talonarios del ultimo talon del usuario que esté en estado inicial
+            if(Global.user && Global.user.talonario && Global.user.talonario.state ==='INI')
+            {
+                for (var i in $scope.articles) {
+                    for (var j in Global.user.talonario.talones) {
+                        if($scope.articles[i]._id === Global.user.talonario.talones[j])
+                        {
+                            $scope.userTalons.push($scope.articles[i]);
+                            $scope.totalPrice = $scope.totalPrice + $scope.articles[i].price;
+                        } 
+                    }
+                }
             }
         });
     };
@@ -68,19 +76,54 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
     $scope.tags = ["popular","amor","picante","divertido"];
     $scope.filters = { };
 
+    $scope.register = !Global.user;
+
     
-     $scope.addSelectedTalon = function(article){
-            $scope.userTalons.push(article);
-	        };
-	        
-	  $scope.crearTalonario = function(){
-     	  var talonario = new Talonarios({
+    $scope.addSelectedTalon = function(article){
+        $scope.userTalons.push(article);
+        if(article.price)
+        {
+            $scope.totalPrice = $scope.totalPrice + article.price;
+        }
+    };
+
+    $scope.removeSelectedTalon = function(article){
+
+        $scope.userTalons.splice($scope.userTalons.indexOf(article), 1);
+        if(article.price)
+        {
+            $scope.totalPrice = $scope.totalPrice - article.price;
+        }
+    };
+
+      
+	$scope.crearTalonario = function(){
+     	var talonario = new Talonarios({
             talones: $scope.userTalons
         });
+        if(Global.user)
+        {
+            Global.user.talonario=talonario;
+        }
+        
         console.log("talonario",JSON.stringify(talonario))
         talonario.$save(function(response) {
             $location.path("talonarios/" + response._id);
         });
-     };
+    };
+
+
+
+    $scope.openModal = function(article){
+
+        $scope.userTalons.splice($scope.userTalons.indexOf(article), 1);
+        if(article.price)
+        {
+            $scope.totalPrice = $scope.totalPrice - article.price;
+        }
+    };
+
+
+
    
 }]);

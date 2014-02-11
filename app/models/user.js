@@ -62,11 +62,11 @@ UserSchema.path('email').validate(function(email) {
     return email.length;
 }, 'Email no puede estar vacío');
 
-UserSchema.path('username').validate(function(username) {
+//UserSchema.path('username').validate(function(username) {
     // if you are authenticating by any of the oauth strategies, don't validate
-    if (authTypes.indexOf(this.provider) !== -1) return true;
-    return username.length;
-}, 'Username no puede estar vacío');
+  //  if (authTypes.indexOf(this.provider) !== -1) return true;
+    //return username.length;
+//}, 'Username no puede estar vacío');
 
 UserSchema.path('hashed_password').validate(function(hashed_password) {
     // if you are authenticating by any of the oauth strategies, don't validate

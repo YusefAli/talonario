@@ -7,8 +7,8 @@
 					<li data-ng-repeat="talon in talonario.talones">
 						<table border="0">
 							<tr>
-								<td><img class="img-thumbnail" src="http://res.cloudinary.com/hn9rn0xhn/image/upload/w_200,h_100/{{talon._id}}.jpg" alt="{{talon.title}}" /></td>
-								<td><div>{{talon.content}}</div></td>
+								<td><img class="img-thumbnail" data-ng-src="/img/articles/{{talon._id}}{{talon.image}}" alt="{{talon.title}}" style="min-height:100px;height:100px;"/></td>
+								<td><div><b>{{talon.title}}</b>{{talon.content}}</div></td>
 							</tr>
 				 		</table> 	
 					</li>	

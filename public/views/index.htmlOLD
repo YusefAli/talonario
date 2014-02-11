@@ -1,0 +1,67 @@
+<section data-ng-controller="IndexController">
+
+
+<section class=" intro">     
+         dfsdfdfsdf
+        </section>
+
+
+<section>
+          <div class="row">
+                <div class="span4"> 
+                </div>    
+                <div class="span4"> 
+                  <button  class="btn btn-success input-block-level" ng-click="removeSelectedTalon(article); addClient = false"> <h1 class="letraG">Crea tu talonario AQUÍ</h1><ul>
+                    <li>Vale por un masaje</li>
+                    <li>Vale por media hora de besos</li>
+                    <li>Vale por una peli en el cine (tú eliges)</li>
+                    <li>Vale por un desayuno en la cama</li>
+                    <li>Vale por una noche de hotel romántica</li>
+                    <li>....</li>
+                  </ul></button>
+                </div> 
+                <div class="span4"> 
+                </div>   
+      </div>
+  </section>
+
+
+
+        <section class="actions intro">     
+          <!-- Featured Section Calls to Action -->
+          <div class="row">
+            <div class="span4">
+              <img class="action-image" src="img/icons/amorTecla.jpg" alt="" >
+              <article class="action-block">
+                <div class="caption"> 
+                  <h3 class="letraG">Crea</h3>
+                  <p>Crea tu propio talonario o elige uno de nuestras preselecciones (joven, picante...).</p>
+                </div>
+              </article>
+            </div>
+            <div class="span4">
+              <img class="action-image" src="img/icons/imprime.jpeg" alt="">
+              <article class="action-block">
+                <div class="caption">  
+                  <h3 class="letraG">Imprime</h3>
+                  <p>Imprime el talonario tu mismo o elige recibir el talonario en casa</p>
+                </div>
+              </article>
+            </div>
+            <div class="span4">
+              <img class="action-image" src="img/icons/regalo.jpg" alt="">
+              <article class="action-block">
+                <div class="caption">  
+                  <h3 class="letraG">Regala</h3>
+                  <p>Disfruta de los talonales, 
+                  	tú lo regalas, pero también lo disfrutas.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- End Featured Section Calls to Action -->
+        </section>
+	<footer class="footer"> 
+        <span class="letraG">© ValePorUn 2014</span>
+    </footer> 
+</section>

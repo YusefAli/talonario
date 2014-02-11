@@ -29,6 +29,14 @@ var ArticleSchema = new Schema({
         default: 'undefined.jpg',
         trim: true
     },
+    price: {
+        type: Number,
+        default: 0
+    },
+    url: {
+        type: String,
+        trim: true
+    },
     user: {
         type: Schema.ObjectId,
         ref: 'User'
@@ -55,9 +63,6 @@ ArticleSchema.statics = {
         this.findOne({
             _id: id
         }).populate('user', 'name username talonario').exec(cb);
-    },
-    imageUrl: function(id) {
-        cloudinary.image("{{article._id}}", {width: 100, height: 100, crop: "fill"});
     }
 };
 

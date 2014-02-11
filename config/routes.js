@@ -72,15 +72,16 @@ module.exports = function(app, passport, auth) {
     
     //save image
     app.post('/saveImage', auth.requiresLogin, articles.saveImage);
+    //app.get('/saveImage', auth.requiresLogin, articles.saveImage);
     
     //Talonario Routes
     var talonarios = require('../app/controllers/talonarios');
     app.get('/talonarios', talonarios.all);
-    app.post('/talonarios', auth.requiresLogin, talonarios.create);
-    app.get('/talonarios/pdf/:talonarioId', auth.requiresLogin, talonarios.pdf);
+    app.post('/talonarios', talonarios.create);
+    app.get('/talonarios/pdf/:talonarioId',talonarios.pdf);
     app.get('/talonarios/:talonarioId', talonarios.show);
-    app.put('/talonarios/:talonarioId', auth.requiresLogin, auth.article.hasAuthorization, talonarios.update);
-    app.del('/talonarios/:talonarioId', auth.requiresLogin, auth.article.hasAuthorization, talonarios.destroy);
+    app.put('/talonarios/:talonarioId',  talonarios.update);
+    app.del('/talonarios/:talonarioId',  talonarios.destroy);
 
     //Paypal
     app.get('/paypal', talonarios.paypal);
@@ -95,6 +96,7 @@ module.exports = function(app, passport, auth) {
 
     //Home route
     var index = require('../app/controllers/index');
+   // app.get('/', index.render);
     app.get('/', index.render);
 
 };

@@ -50,11 +50,16 @@ exports.create = function(req, res) {
 exports.saveImage = function(req, res) {
      var article = new Article(req.body);
     article.user = req.user;
-   // console.log(res.jsonp(req.body));
+   //console.log(res.jsonp(req.body));
     article.title = req.body.title;
     article.content = req.body.content; 
     article.tags = req.body.tags;
-    article.image = req.files.file.name;
+    article.image = req.files.Imagen.name;
+
+    if(req.body.price)
+    {
+        article.price=req.body.price;
+    }
 
 
     
@@ -68,13 +73,15 @@ exports.saveImage = function(req, res) {
             console.log("article saved",article._id);
             // set where the file should actually exists - in this case it is in the "images" directory
             var target_path = './public/img/articles/' +article._id+article.image;
-            fs.readFile(req.files.file.path, function (err, data) {
+            fs.readFile(req.files.Imagen.path, function (err, data) {
               fs.writeFile(target_path, data, function (err) {
+                res.setHeader("Content-Type", "text/html");
+                
                 res.redirect("/#!/articles/"+ article._id);
               });
             });
 
-            //cloudinary.uploader.upload(req.files.file.path,
+            //cloudinary.uploader.upload(req.files.Imagen.path,
               //                     function(result) { console.log(result);},{public_id : article._id, format : "jpg"});
            // res.redirect("/#!/articles/"+ article._id);
         }

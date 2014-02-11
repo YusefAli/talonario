@@ -2,7 +2,7 @@
 	<span>{{article.created | date:'dd/MM/yyyy HH:mm'}}</span> /
 	<span>{{article.user.name}}</span>
 	<h2>{{article.title}} <a data-ng-show="global.user._id == article.user._id" href="/#!/articles/{{article._id}}/edit">edit</a></h2>
-	<img class="img-rounded" src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
+	<img class="img-rounded" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
 	<div>{{article.content}}</div>
 	<div ng-repeat="tag in article.tags"><span class="label label-success">{{tag}}</span></div>
 </section>

@@ -19,7 +19,7 @@ module.exports = function(passport) {
             _id: id
         }, function(err, user) {
             done(err, user);
-        });
+        }).populate('talonario').populate('talonario.talones');
     });
 
     //Use local strategy
@@ -45,7 +45,7 @@ module.exports = function(passport) {
                     });
                 }
                 return done(null, user);
-            });
+            }).populate('talonario').populate('talonario.talones');
         }
     ));
 
@@ -76,7 +76,7 @@ module.exports = function(passport) {
                 } else {
                     return done(err, user);
                 }
-            });
+            }).populate('talonario').populate('talonario.talones');
         }
     ));
 
@@ -108,7 +108,7 @@ module.exports = function(passport) {
                 } else {
                     return done(err, user);
                 }
-            });
+            }).populate('talonario').populate('talonario.talones');
         }
     ));
 
@@ -137,7 +137,7 @@ module.exports = function(passport) {
                 } else {
                     return done(err, user);
                 }
-            });
+            }).populate('talonario').populate('talonario.talones');
         }
     ));
 
@@ -166,7 +166,7 @@ module.exports = function(passport) {
                 } else {
                     return done(err, user);
                 }
-            });
+            }).populate('talonario').populate('talonario.talones');
         }
     ));
 };

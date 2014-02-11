@@ -1,17 +1,164 @@
+.active {
+  background-color: #FFCC00;
+}
+.evenCesta{
+  background-color: #FFCC00;
+}
+
 h1 {
-    text-align:center
+    text-align:left;
 }
 
 body {
-	background-color:whitesmoke;
+  background-color: #108a93;
+  background-attachment: fixed;
 }
 
-ul.articles li:not(:last-child) {
-    border-bottom:2px solid #ccc
+.intro { 
+  left: 0px;
+  right: 0px;
+  background: url('/img/icons/fancy-floral-pattern-384.jpg') 50% 0 fixed; 
+  height: auto;  
+  margin: 0 auto; 
+    width: 100%; 
+    position: relative; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    padding: 100px 0;
 }
 
-.contador{
-    background-color: #F0E68C;
-    border: 1px solid #D2D2D2;
-    border-radius: 8px 8px 8px 8px;
+.letraG {
+  font-family: 'The Girl Next Door', arial, serif; 
+}
+
+.sideNavLeft
+{
+    left: 0px;
+    position: fixed;    
+    text-align:left;
+    min-width: 19%; 
+    width: 19%;
+
+}
+
+.talon-header{
+  background-color: #FF0000;
+  background-image: -moz-linear-gradient(top, #FF0000, #FF9900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF0000), to(#FF9900));
+  background-image: -webkit-linear-gradient(top, #FF0000, #FF9900);
+  background-image: -o-linear-gradient(top, #FF0000, #FF9900);
+  background-image: linear-gradient(to bottom, #FF0000, #FF9900);
+  background-repeat: repeat-x;
+  border-color: #FF9900;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffFF0000', endColorstr='#ffFF9900', GradientType=0);
+}
+
+.listado
+{
+    background-color:  #FFCC00;
+}
+
+.tuMismo
+{
+    width: 8%;
+}
+
+.filtro
+{
+    background-color: #FFCC00;
+}
+
+.talon-header
+{
+   background-color:    #FF9900;
+}
+
+.mimodal
+{
+   background-color:    #FFCC00;
+}
+
+.mimodal-header
+{
+   background-color:    #FF9900;
+}
+
+.sideNavRight
+{
+    right: 0px;
+    position: fixed;
+    text-align:left; 
+
+}
+
+@media screen and (max-width: 767px) {
+    .sideNavLeft {
+        visibility:hidden;
+
+    }
+}
+
+.alert-error 
+{
+    visibility:hidden;
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .sideNavRight {
+        position: relative;
+    }
+}
+
+.mi-block-level {
+  width: 100%;
+  min-height: 28px;        // Make inputs at least the height of their button counterpart
+  .box-sizing(border-box); // Makes inputs behave like true block-level elements
+}
+
+
+.mano {
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+.actions-wrapper
+{
+   bottom: 0px;
+}
+
+
+.actions {
+  padding: 40px 0;
+}
+
+.actions .span4 {
+  text-align: center;
+}
+
+.action-block {
+  padding: 30px 30px 30px;
+  background: #fff;
+  border: 1px #afd3c5 solid;
+  text-align: left;
+  position: relative;
+  z-index: 20;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+img.action-image {
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  border-radius: 80px;
+  border: 5px #adcabf solid;
+  margin-bottom: -75px;
+  position: relative;
+  z-index: 50;
+}  
+
+.mobile img.action-image {
+  box-shadow: 0px 0px 0px 5px #fff;
+  border: 0px;
 }

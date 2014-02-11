@@ -62,9 +62,14 @@ exports.pdf = function(req, res) {
                         var path=resolvedPath+'/'+talon._id+talon.image;
 
                         console.log(path);
-                        doc.text(talon.title)
-                            .image(path,{ width: 400 })
-                            .text(talon.content);
+                        if(i%3==0 && i>0)
+                        {
+                            doc.addPage();
+                        }
+                        doc.image(path,{ width: 520 });
+                       // doc.text(talon.title)
+                       //     .image(path,{ width: 400 })
+                       //    .text(talon.content);
 
                         //doc.image('http://res.cloudinary.com/hn9rn0xhn/image/upload/w_1000,h_500/'+talon._id+'.jpg', 100, 100);
                         
@@ -103,6 +108,13 @@ exports.create = function(req, res) {
                 talonario: talonario
             });
         } else {
+            if(req.user)
+            {
+                var user = req.user;
+                user.talonario = talonario;
+                user.save();
+            }
+           
             res.jsonp(talonario);
         }
     });
@@ -159,15 +171,32 @@ exports.show = function(req, res) {
  * List of Talonarios
  */
 exports.all = function(req, res) {
-    Talonario.find().sort('-created').populate('user', 'name username').populate('talones').exec(function(err, talonarios) {
-        if (err) {
-            res.render('error', {
-                status: 500
-            });
-        } else {
-            res.jsonp(talonarios);
-        }
-    });
+    if(req.user)
+    {
+        Talonario.find({
+                user: req.user._id
+            }).sort('-created').populate('user', 'name username').populate('talones').exec(function(err, talonarios) {
+            if (err) {
+                res.render('error', {
+                    status: 500
+                });
+            } else {
+                res.jsonp(talonarios);
+            }
+        });
+    }
+    else
+    {
+        Talonario.find().sort('-created').populate('user', 'name username').populate('talones').exec(function(err, talonarios) {
+            if (err) {
+                res.render('error', {
+                    status: 500
+                });
+            } else {
+                res.jsonp(talonarios);
+            }
+        });
+    }
 };
 
 

@@ -1,52 +1,113 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
-<div class="container-fluid">  
-      <div class="row-fluid">  
-        <div class="span3">  
-          <div class="well sidebar-nav">  
-            <ul class="nav nav-list">  
-              <li class="nav-header">Filtrar:</li>  
-              <li ><button ng-click="filters.tags = ''" class="input-block-level">TODOS</button></li>
-            <!--  <li class="active"><a href="#">HTML 4.01</a></li> -->  
-              <li data-ng-repeat="tag in tags"><button class="input-block-level" ng-click="filters.tags = tag">{{tag}}</button></li>  
 
-           </ul>  
-          </div><!--/.well -->  
-        </div><!--/span-->  
-        <div class="span9">  
-          <div class="leaderboard">
-          	<div class="navbar-header nav contador">
-      				<h2>{{userTalons.length}} seleccionados<a ng-show="userTalons.length > 1" class="btn btn-success btn-large" ng-click="crearTalonario()">Crear Talonario</a></h2>
-    			   </div>  
-          </div>  
-          <div class="row-fluid">  
-    				<ul class="articles unstyled">
-    					<li data-ng-repeat="article in articles | filter:filters" ng-show="userTalons.indexOf(article) == -1">
-    						<!--<span>{{article.created | date:'shortDate'}}</span> /
-    						<span>{{article.user.name}}</span>-->
-    						<div>
-    							<h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a></h2>
-                  <ul class="inline">  
-                    <li data-ng-repeat="tag in article.tags"><span class="label label-success">{{tag}}</span></li> 
-                  </ul>  
-    							<div ng-show="userTalons.indexOf(article) == -1">
-    									<ul class="unstyled">
-                        <li><img class="img-rounded img-responsive" src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" /></li>
-      									<!--<td><div>{{article.content}}</div></td>-->
-      					   			<li><a class="btn btn-success input-block-level" ng-click="addSelectedTalon(article)">Seleccionar</a></li>
-                      </ul> 
-    					 		</div> 			
-    						</div>
-    					</li>
-    				</ul>
-          </div><!--/row-->  
-          <hr>  
-     <footer> 
-        <p><h1 data-ng-show="userTalons.length == articles.length">Ya tienes todos los talones en tu talonario!!!</h1></p> 
-        <p>© Company 2014</p>  
-      </footer>  
-  
-    </div><!--/.fluid-container-->  
+  <div class="container-fluid">  
+        <div class="row-fluid">  
+          <div class="span3">  
+            <div class="well well-small sideNavLeft filtro">  
+              <ul class="nav nav-list">  
+                <li class="nav-header">Filtrar:</li>  
+                <li ><button data-ng-click="filters.tags = ''" class="input-block-level label label-info">TODOS</button></li>
+              <!--  <li class="active"><a href="#">HTML 4.01</a></li> -->  
+                <li data-ng-repeat="tag in tags"><button class="input-block-level  label label-info" data-ng-click="filters.tags = tag">{{tag}}</button></li>  
+             </ul>  
+            </div><!--/.well -->  
+          </div><!--/span--> 
 
+           <div class="span8"> 
+            <div class="row-fluid"> 
+      					<div data-ng-repeat="article in articles | filter:filters" >
+                  <div class="well well-small span12 listado">
+                    <div>
+        							<div class="mano inline">
+                       <!-- talon-header <div data-ng-hide="article.stars!=3" class="trescorazones"><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart icon-white"></i><i class="icon-heart icon-white"></i>
+                        </div> 
+                        <div data-ng-hide="article.stars!=4" class="cuatrocorazones"><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart icon-white"></i>
+                        </div>
+                        <div data-ng-show="article.stars!=5" class="cincocorazones"><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart"></i><i class="icon-heart"></i>
+                        </div> 
+                        <div>
+                          {{article.title}}-->
+                          <ul class="inline">  
+                             <li data-ng-repeat="tag in article.tags" data-ng-click="filters.tags = tag"><span class="label label-success"><i class="icon-tags"></i>{{tag}}</span></li> 
+                          </ul> 
+                        </div>
+                      </div>
+                       
+  									<div class="mano body" ng-click="addClient = true">
+                          <div class="span9">
+                            <img class="img-rounded img-responsive img-talon" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
+                          </div>
+                          <div class="span3"> 
+                                   <ul class="unstyled" ng-click="addClient = false">  
+                                    <li> <div>OFERTA: <span data-ng-show="!article.price">0</span>{{article.price}}€</div></li> 
+                                    <li><button class="demo btn btn-large btn-primary input-block-level" ng-click="addClient = true"><i class="icon-eye-open"></i> Detalle</button></li> 
+                                    <li><button  data-ng-show="userTalons.indexOf(article) === -1" class="demo btn btn-success btn-large input-block-level" ng-click="addSelectedTalon(article); addClient = false"><i class="icon-gift"></i> Añadir</button></li> 
+                                    <li><button  data-ng-hide="userTalons.indexOf(article) === -1" class="demo btn btn-inverse input-block-level" ng-click="removeSelectedTalon(article); addClient = false"><i class="icon-remove"></i> Quitar</button></li> 
+                                  </ul>  
+                          </div>
+                    </div> 
 
+                    <div id="{{article._id}}" ng-show="addClient" class="modal mimodal" tabindex="-1">
+                      <div class="modal-header mimodal-header">
+                        <button type="button" class="close" ng-click="addClient = false">×</button>
+                        <h3>{{article.title}}</h3>
+                      </div>
+                      <div class="modal-body">
+                        <p>{{article.content}}</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn input-block-level" ng-click="addClient = false">Cerrar</button>
+                        <div data-ng-show="userTalons.indexOf(article) === -1"><a class="btn btn-success input-block-level" ng-click="addSelectedTalon(article)"><b>Añadir</b> por <span data-ng-show="!article.price">0</span>{{article.price}}€</a></div>
+                        <!--<div data-ng-hide="userTalons.indexOf(article) === -1"><a class="btn btn-inverse input-block-level" ng-click="removeSelectedTalon(article)"><b>Quitar</b> por <span data-ng-show="!article.price">0</span>{{article.price}}€</a></div>-->
+                      </div>
+                    </div>
+                  </div>		
+      					</div>
+            </div><!--/row-->  
+          </div><!--/span-->
+
+          <div class="span1"> 
+            <div class="sideNavRight">
+              <ul class="nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle btn" data-toggle="dropdown" class="btn"><img class="img-rounded img-responsive" data-ng-src="/img/icons/icono-condiciones.png" alt="Carrito de la compra" />
+                          <p data-ng-show="userTalons.length > 0"><span class="badge badge-info">#{{userTalons.length}}</span></p>
+                          <p data-ng-show="userTalons.length > 0"><span class="badge badge-info">{{totalPrice}}€</span></p>
+                          <p data-ng-show="userTalons.length > 0"><span class="label label-success"><i class="icon-zoom-in"></i>Ver</span></p>
+                        </a>
+                        <ul class="dropdown-menu mi-block-level" style="position: relative;">
+                          <a class="btn btn-success input-block-level" data-ng-click="crearTalonario()">Comprar</a>
+                            <div class="modal-body">
+                               <ul class="unstyled">
+                                <li data-ng-repeat="article in userTalons">
+                                  <div>
+                                    <table class="table">
+                                      <tr>
+                                        <td ng-click="removeSelectedTalon(article)"><i class="icon-trash"></i></td>
+                                       <!-- <td style="width:50px"><img class="img-thumbnail" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" style="min-height:50px;height:50px;"/></td>--> 
+                                        <td><span class="pull-left">{{article.title}}</span></td>
+                                        <td><span class="badge pull-right">{{article.price}}€</span></td>
+                                      </tr>
+                                    </table>
+                                  </div>      
+                                </li>
+                                <table class="table table-striped">
+                                  <tr>
+                                    <td>Número de talones: <span class="badge badge-info">#{{userTalons.length}}</span></td>
+                                    <td>Total: <span class="badge badge-success pull-right">{{totalPrice}}€</span></td>
+                                  </tr>
+                                </table>
+                                <a class="btn btn-success input-block-level" data-ng-click="crearTalonario()">Comprar</a>
+                                <button class="btn input-block-level" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                               
+                              </ul>
+                            </div>
+                        </ul>
+                    </li>
+              </ul>
+            </div>  
+          </div><!--/span-->
+    </div><!--/row-fluid-->  
+  </div><!--/.fluid-container-->  
 
 </section>
