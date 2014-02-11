@@ -38,6 +38,7 @@
         "grunt": "latest",
         "grunt-cli": "latest",
         "grunt-env": "latest",
+        "cloudinary": "",
         "pdfkit":"latest"
     },
     "devDependencies": {
