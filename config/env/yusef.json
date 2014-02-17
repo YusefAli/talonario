@@ -1,7 +1,7 @@
 {
     "db": "mongodb://localhost/talon",
     "app": {
-        "name": "eTalonario.com - Crea tus propios talonarios de amor..."
+        "name": "valePorUn.com - Crea tus propios talonarios de amor..."
     },
     "facebook": {
         "clientID": "1422862261287407",

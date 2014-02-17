@@ -1,26 +1,26 @@
 {
     "db": "mongodb://talon:04051984@ds031319.mongolab.com:31319/talonario",
     "app": {
-        "name": "MEAN - A Modern Stack - Production"
+        "name": "valePorUn.com - Crea tu talonario de amor..."
     },
     "facebook": {
         "clientID": "1422862261287407",
         "clientSecret": "3b746a32b7793c7b238268bfb0176127",
-        "callbackURL": "http://localhost:3000/auth/facebook/callback"
+        "callbackURL": "http://valePorUn.com/auth/facebook/callback"
     },
     "twitter": {
         "clientID": "l380NGoC2i00oFqVxNZGQ",
         "clientSecret": "78KbHXWpUHCHfSPmvkKxmPRJwcBgye1E6IaRn3K8vAA",
-        "callbackURL": "http://localhost:3000/auth/twitter/callback"
+        "callbackURL": "http://valePorUn.com/auth/twitter/callback"
     },
     "github": {
         "clientID": "APP_ID",
         "clientSecret": "APP_SECRET",
-        "callbackURL": "http://localhost:3000/auth/github/callback"
+        "callbackURL": "http://valePorUn.com/auth/github/callback"
     },
     "google": {
         "clientID": "939747319382.apps.googleusercontent.com",
         "clientSecret": "ndu5p_9WbfyCOXieamBOg29n",
-        "callbackURL": "http://localhost:3000/auth/google/callback"
+        "callbackURL": "http://valePorUn.com/auth/google/callback"
     }
 }

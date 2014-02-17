@@ -3,11 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Chef:Yusef Ali Garcia
+    Contact: reyusdroid [at] gmail.com
+    Twitter: @ValePorUn
+    From:Madrid, Madrid, Spain
 
 # THANKS
 
-    <name>
+    mean.io
 
 # TECHNOLOGY COLOPHON
 

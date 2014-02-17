@@ -1,0 +1,1 @@
+{ "__v" : 0, "_id" : { "$oid" : "52f950ff3fc8458a0c000002" }, "email" : "elmoroguapo@hotmail.com", "hashed_password" : "b0dcec5f18d3340e58a2506d1b2ea9d9f60d87a9", "name" : "yusef", "provider" : "local", "salt" : "1123234693951", "talonario" : { "$oid" : "52f954b43fc8458a0c000011" } }
