@@ -30,7 +30,7 @@
                                   <div>
                                     <table class="table">
                                       <tr>
-                                        <td ng-click="removeSelectedTalon(article)"><i class="icon-trash"></i></td>
+                                        <td ng-click="removeSelectedTalon(article)" class="mano"><i class="icon-trash"></i></td>
                                        <!-- <td style="width:50px"><img class="img-thumbnail" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" style="min-height:50px;height:50px;"/></td>--> 
                                         <td><span class="pull-left">{{article.title}}</span></td>
                                         <td><span class="badge pull-right">{{article.price}}€</span></td>
@@ -128,7 +128,12 @@
               </ul>
     </div>
     <div class="modal-body">
-      <a href="/auth/facebook" class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/facebook.png" alt="Entra con Facebook" href="/auth/facebook"/>Facebook</a>
+       <div class="row-fluid"> 
+         <div class="span6" > <a href="/auth/facebook" class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/facebook.png" alt="Entra con Facebook" href="/auth/facebook"/></a></div>
+          <div class="span6" > <a href="/auth/google" class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/google.png" alt="Entra con Google" href="/auth/google"/></a></div>
+      </div>
+      
+      
       <div><a class="btn btn-success input-block-level" href="signup"><b>Crear cuenta</b></a></div>
 
     </div>
