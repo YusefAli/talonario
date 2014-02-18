@@ -137,14 +137,14 @@
               </ul>
     </div>
     <div class="modal-body">
-      <a href="/auth/facebook"><button  class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/facebook.png" alt="Entra con Facebook" />Entra con Facebook</button></a>
-      <div data-ng-show="userTalons.indexOf(article) === -1"><a class="btn btn-success input-block-level" href="signup"><b>Crear cuenta</b></a></div>
+      <a href="/auth/facebook" class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/facebook.png" alt="Entra con Facebook" href="/auth/facebook"/>Facebook</a>
+      <div><a class="btn btn-success input-block-level" href="signup"><b>Crear cuenta</b></a></div>
 
     </div>
     <div class="mimodal" ng-click="register=false">
 
       
-      <div data-ng-show="userTalons.indexOf(article) === -1"><a class="btn btn-success input-block-level" href="signin"><b>Login</b></a></div>
+      <div><a class="btn btn-success input-block-level" href="signin"><b>Login</b></a></div>
 
       <button class="btn btn-success input-block-level" data-dismiss="modal" aria-hidden="true">No quiero crear cuenta!</button>
     </div>
