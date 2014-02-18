@@ -92,11 +92,11 @@
                     <div id="{{article._id}}" ng-show="addClient" class="modal mimodal" tabindex="-1">
                       <div class="modal-header mimodal-header">
                         <button type="button" class="close" ng-click="addClient = false">×</button>
-                        <h3>{{article.title}}</h3>
+                        <h1>{{article.title}}</h1>
                       </div>
                       <div class="modal-body">
                          <img class="img-rounded img-responsive img-talon" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
-                        <p>{{article.content}}</p>
+                        <h2>{{article.content}}</h2>
                       </div>
                       <div class="modal-footer">
                         <button type="button" data-dismiss="modal" class="btn input-block-level" ng-click="addClient = false">Cerrar</button>
