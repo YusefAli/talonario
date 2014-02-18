@@ -77,6 +77,11 @@ body {
    background-color:    #FFCC00;
 }
 
+.mimodalBack
+{
+   opacity: .3;
+}
+
 .mimodal-header
 {
    background-color:    #FF9900;
