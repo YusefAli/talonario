@@ -40,7 +40,8 @@
         "grunt-env": "0.4.0",
         "cloudinary": "1.0.6",
         "pdfkit":"0.2.6",
-	"node-phantom":"0.2.5"
+	"node-phantom":"0.2.5",
+	"phantomjs":""
     },
     "devDependencies": {
         "supertest": "0.8.1",

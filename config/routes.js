@@ -121,7 +121,7 @@ module.exports = function(app, passport, auth) {
 							});
 						});
 					});
-				});
+				},{phantomPath:require('phantomjs').path});
 		} else 
 		{
 			console.log("index");		
