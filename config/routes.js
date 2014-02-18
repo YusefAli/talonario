@@ -126,7 +126,9 @@ module.exports = function(app, passport, auth) {
 		{
 			console.log("index");		
 			// If there is no _escaped_fragment_, we return the normal index template. 
-			res.render('index');
+			res.render('index', {
+				user: req.user ? JSON.stringify(req.user) : "null"
+			    });
 		}
 	});
 };
