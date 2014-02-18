@@ -15,8 +15,7 @@ var UserSchema = new Schema({
     name: String,
     email: String,
     username: {
-        type: String,
-        unique: true
+        type: String
     },
     talonario: {
         type: Schema.ObjectId,
