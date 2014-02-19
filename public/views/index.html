@@ -99,6 +99,8 @@
                       <div class="modal-body">
                          <img class="img-rounded img-responsive img-talon" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
                         <h2>{{article.content}}</h2>
+			<a data-ng-show="global.user._id == article.user._id" href="/#!/articles/{{article.title}}/{{article._id}}">Abrir para editar</a>
+
                       </div>
                       <div class="modal-footer">
                         <button type="button" data-dismiss="modal" class="btn input-block-level" ng-click="addClient = false">Cerrar</button>

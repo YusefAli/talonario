@@ -1,8 +1,9 @@
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
 	<span>{{article.created | date:'dd/MM/yyyy HH:mm'}}</span> /
-	<span>{{article.user.name}}</span>
-	<h2>{{article.title}} <a data-ng-show="global.user._id == article.user._id" href="/#!/articles/{{article._id}}/edit">edit</a></h2>
+	<span>Creado por: {{article.user.name}}</span>
+	<h1>{{article.title}} <a data-ng-show="global.user._id == article.user._id" href="/#!/articles/{{article._id}}/edit">editar</a></h1>
+	<div ng-repeat="tag in article.tags" class="inline"><h2 class="label label-success">{{tag}}</h2></div>
 	<img class="img-rounded" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
-	<div>{{article.content}}</div>
-	<div ng-repeat="tag in article.tags"><span class="label label-success">{{tag}}</span></div>
+	<p>{{article.content}}</p>
+	
 </section>
