@@ -65,7 +65,7 @@ module.exports = function(app, passport, auth) {
     app.get('/articles', articles.all);
     app.post('/articles', auth.requiresLogin, articles.create);
     app.get('/articles/:articleId', articles.show);
-    app.get('/articles/:articleTitle/:articleId', articles.show);
+    app.get('/articles/:articleId/:articleTitle', articles.show);
     app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
     app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
     //Finish with setting up the articleId param
@@ -109,13 +109,13 @@ module.exports = function(app, passport, auth) {
 				return ph.createPage(function(err, page) { 
 					// We open phantomJS at the proper page.
 					console.log("createPage"); 
-					return page.open("http://valeporun.com/#!" + req.query._escaped_fragment_, function(status) {
+					return page.open("http://valePorUn.com/#!" + req.query._escaped_fragment_, function(status) {
 						console.log("createPage FIN");  
 						return page.evaluate((function() { 
-							console.log("page.evaluate"); 
+							console.log("page evaluate"); 
 							// We grab the content inside <html> tag... 
 							return document.getElementsByTagName('html')[0].innerHTML; }), function(err, result) {
-								console.log("page.evaluate FIN");  
+								console.log("page evaluate FIN");  
 								// ... and we send it to the client. 
 								res.send(result); 
 								return ph.exit(); 

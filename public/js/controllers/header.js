@@ -2,16 +2,19 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     $scope.global = Global;
 
     $scope.menu = [{
-        "title": "Crear Tú Talonario",
+        "title": "Crear",
         "link": "articles"
     },{
-        "title": "Últimos Talonarios",
+        "title": "Últimos talonarios",
         "link": "talonarios"
     }];
 
     $scope.registerMenu = [{
         "title": "Crea tu propio Talón",
         "link": "articles/create"
+    },{
+        "title": "Tús Talonarios",
+        "link": "talonarios"
     }];
     
     $scope.isCollapsed = false;
