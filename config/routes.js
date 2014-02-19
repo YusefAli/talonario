@@ -113,8 +113,10 @@ module.exports = function(app, passport, auth) {
 						console.log("createPage FIN");  
 						return page.evaluate((function() { 
 							console.log("page evaluate"); 
-							// We grab the content inside <html> tag... 
+							// We grab the content inside <html> tag...
+							document.title = document.getElementsByTagName('h1')[0].innerHTML; 
 							return document.getElementsByTagName('html')[0].innerHTML; }), function(err, result) {
+								
 								console.log("page evaluate FIN");  
 								// ... and we send it to the client. 
 								res.send(result); 
