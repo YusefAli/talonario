@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+	<url>
+	    <loc>http://valePorUn.com/#!/</loc>
+	    <image:image>
+	       <image:loc>http://valeporun.com/img/articles/52f9546f3fc8458a0c00001014.png</image:loc>      
+	    </image:image>
+	</url>
+	<url>
+	    <loc>http://valeporun.com/#!/articles/52f9546f3fc8458a0c000010</loc>
+	    <image:image>
+	       <image:loc>http://valeporun.com/img/articles/52f9546f3fc8458a0c00001014.png</image:loc>      
+	    </image:image>
+	</url>
+	<url>
+	    <loc>http://valeporun.com/#!/articles/52f954413fc8458a0c00000f</loc>
+	    <image:image>
+	       <image:loc>http://valeporun.com/img/articles/52f954413fc8458a0c00000f13.png</image:loc>      
+	    </image:image>
+	</url>
+</urlset>

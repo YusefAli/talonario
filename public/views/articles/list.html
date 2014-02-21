@@ -1,6 +1,7 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
 
-  <div class="container-fluid">  
+<div id="fb-root"></div>
+    <div class="container-fluid"  ng-class="{'mimodalBack' : register == true}">  
         <div class="row-fluid">  
           <div class="span3">  
             <div class="well well-small sideNavLeft filtro">  
@@ -8,12 +9,54 @@
                 <li class="nav-header">Filtrar:</li>  
                 <li ><button data-ng-click="filters.tags = ''" class="input-block-level label label-info">TODOS</button></li>
               <!--  <li class="active"><a href="#">HTML 4.01</a></li> -->  
-                <li data-ng-repeat="tag in tags"><button class="input-block-level  label label-info" data-ng-click="filters.tags = tag">{{tag}}</button></li>  
+                <li data-ng-repeat="tag in tags"><button class="input-block-level  label label-info" ng-class="{'active' : filters.tags == tag}" data-ng-click="filters.tags = tag">{{tag}}</button></li>  
              </ul>  
-            </div><!--/.well -->  
-          </div><!--/span--> 
+            </div><!--/.well --> 
 
-           <div class="span8"> 
+            <div class="span1"> 
+            <div class="sideNavRight">
+              <ul class="nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle btn" data-toggle="dropdown" class="btn"><img class="img-rounded img-responsive" data-ng-src="/img/icons/icono-condiciones.png" alt="Carrito de la compra" />
+                          <p data-ng-show="userTalons.length > 0"><span class="badge badge-info">#{{userTalons.length}}</span></p>
+                          <p data-ng-show="userTalons.length > 0"><span class="badge badge-info">{{totalPrice}}€</span></p>
+                          <p data-ng-show="userTalons.length > 0"><span class="btn btn-success input-block-level"><i class="icon-zoom-in"></i>Ver</span></p>
+                        </a>
+                        <ul class="dropdown-menu mi-block-level" style="position: relative;">
+                          <a class="btn btn-success input-block-level" data-ng-click="crearTalonario()"><i class="icon-shopping-cart"></i>Finalizar</a>
+                            <div class="modal-body">
+                               <ul class="unstyled">
+                                <li data-ng-repeat="article in userTalons" ng-class="{'evenCesta' : 'true == even'}">
+                                  <div>
+                                    <table class="table">
+                                      <tr>
+                                        <td ng-click="removeSelectedTalon(article)" class="mano"><i class="icon-trash"></i></td>
+                                       <!-- <td style="width:50px"><img class="img-thumbnail" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" style="min-height:50px;height:50px;"/></td>--> 
+                                        <td><span class="pull-left">{{article.title}}</span></td>
+                                        <td><span class="badge pull-right">{{article.price}}€</span></td>
+                                      </tr>
+                                    </table>
+                                  </div>      
+                                </li>
+                                <table class="table table-striped">
+                                  <tr>
+                                    <td>Número de talones: <span class="badge badge-info">#{{userTalons.length}}</span></td>
+                                    <td>Total: <span class="badge badge-success pull-right">{{totalPrice}}€</span></td>
+                                  </tr>
+                                </table>
+                                <a class="btn btn-success input-block-level" data-ng-click="crearTalonario()"><i class="icon-shopping-cart"></i>Finalizar</a>
+                                <button class="btn input-block-level" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                               
+                              </ul>
+                            </div>
+                        </ul>
+                    </li>
+              </ul>
+            </div>  
+          </div><!--/span--> 
+          </div><!--/span-->           
+
+           <div class="span8" > 
             <div class="row-fluid"> 
       					<div data-ng-repeat="article in articles | filter:filters" >
                   <div class="well well-small span12 listado">
@@ -33,16 +76,17 @@
                         </div>
                       </div>
                        
-  									<div class="mano body" ng-click="addClient = true">
-                          <div class="span9">
+  									<div class="mano body" >
+                          <div class="span9"  ng-click="addClient = true">
                             <img class="img-rounded img-responsive img-talon" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
                           </div>
                           <div class="span3"> 
-                                   <ul class="unstyled" ng-click="addClient = false">  
-                                    <li> <div>OFERTA: <span data-ng-show="!article.price">0</span>{{article.price}}€</div></li> 
+                                   <ul class="unstyled">  
                                     <li><button class="demo btn btn-large btn-primary input-block-level" ng-click="addClient = true"><i class="icon-eye-open"></i> Detalle</button></li> 
-                                    <li><button  data-ng-show="userTalons.indexOf(article) === -1" class="demo btn btn-success btn-large input-block-level" ng-click="addSelectedTalon(article); addClient = false"><i class="icon-gift"></i> Añadir</button></li> 
-                                    <li><button  data-ng-hide="userTalons.indexOf(article) === -1" class="demo btn btn-inverse input-block-level" ng-click="removeSelectedTalon(article); addClient = false"><i class="icon-remove"></i> Quitar</button></li> 
+                                    <li><button  data-ng-show="userTalons.indexOf(article) === -1" class="demo btn btn-success btn-large input-block-level" ng-click="addSelectedTalon(article)"><i class="icon-plus-sign"></i> Añadir  </button></li> 
+                                    <li><button  data-ng-hide="userTalons.indexOf(article) === -1" class="demo btn btn-inverse input-block-level" ng-click="removeSelectedTalon(article);addClient = true"><i class="icon-remove"></i> Quitar</button></li>
+                                    <li><br></li>  
+                                    <li><div class="badge badge-important input-block-level"> PRECIO: <b><span data-ng-show="!article.price">0</span>{{article.price}}€</b></div></li>
                                   </ul>  
                           </div>
                     </div> 
@@ -50,15 +94,17 @@
                     <div id="{{article._id}}" ng-show="addClient" class="modal mimodal" tabindex="-1">
                       <div class="modal-header mimodal-header">
                         <button type="button" class="close" ng-click="addClient = false">×</button>
-                        <h3>{{article.title}}</h3>
+                        <h1>{{article.title}}</h1>
                       </div>
                       <div class="modal-body">
-                        <p>{{article.content}}</p>
-			
+                         <img class="img-rounded img-responsive img-talon" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" />
+                        <h2>{{article.content}}</h2>
+			<a href="/#!/articles/{{article._id}}/{{article.title}}" target="_blank">Abrir en otra ventana</a>
+
                       </div>
                       <div class="modal-footer">
                         <button type="button" data-dismiss="modal" class="btn input-block-level" ng-click="addClient = false">Cerrar</button>
-                        <div data-ng-show="userTalons.indexOf(article) === -1"><a class="btn btn-success input-block-level" ng-click="addSelectedTalon(article)"><b>Añadir</b> por <span data-ng-show="!article.price">0</span>{{article.price}}€</a></div>
+                        <div data-ng-show="userTalons.indexOf(article) === -1"><a class="btn btn-success input-block-level" ng-click="addSelectedTalon(article);addClient = false"><b>Añadir</b> por <span data-ng-show="!article.price">0</span>{{article.price}}€</a></div>
                         <!--<div data-ng-hide="userTalons.indexOf(article) === -1"><a class="btn btn-inverse input-block-level" ng-click="removeSelectedTalon(article)"><b>Quitar</b> por <span data-ng-show="!article.price">0</span>{{article.price}}€</a></div>-->
                       </div>
                     </div>
@@ -67,48 +113,39 @@
             </div><!--/row-->  
           </div><!--/span-->
 
-          <div class="span1"> 
-            <div class="sideNavRight">
-              <ul class="nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle btn" data-toggle="dropdown" class="btn"><img class="img-rounded img-responsive" data-ng-src="/img/icons/icono-condiciones.png" alt="Carrito de la compra" />
-                          <p data-ng-show="userTalons.length > 0"><span class="badge badge-info">#{{userTalons.length}}</span></p>
-                          <p data-ng-show="userTalons.length > 0"><span class="badge badge-info">{{totalPrice}}€</span></p>
-                          <p data-ng-show="userTalons.length > 0"><span class="label label-success"><i class="icon-zoom-in"></i>Ver</span></p>
-                        </a>
-                        <ul class="dropdown-menu mi-block-level" style="position: relative;">
-                          <a class="btn btn-success input-block-level" data-ng-click="crearTalonario()">Comprar</a>
-                            <div class="modal-body">
-                               <ul class="unstyled">
-                                <li data-ng-repeat="article in userTalons">
-                                  <div>
-                                    <table class="table">
-                                      <tr>
-                                        <td ng-click="removeSelectedTalon(article)"><i class="icon-trash"></i></td>
-                                       <!-- <td style="width:50px"><img class="img-thumbnail" data-ng-src="/img/articles/{{article._id}}{{article.image}}" alt="{{article.title}}" style="min-height:50px;height:50px;"/></td>--> 
-                                        <td><span class="pull-left">{{article.title}}</span></td>
-                                        <td><span class="badge pull-right">{{article.price}}€</span></td>
-                                      </tr>
-                                    </table>
-                                  </div>      
-                                </li>
-                                <table class="table table-striped">
-                                  <tr>
-                                    <td>Número de talones: <span class="badge badge-info">#{{userTalons.length}}</span></td>
-                                    <td>Total: <span class="badge badge-success pull-right">{{totalPrice}}€</span></td>
-                                  </tr>
-                                </table>
-                                <a class="btn btn-success input-block-level" data-ng-click="crearTalonario()">Comprar</a>
-                                <button class="btn input-block-level" data-dismiss="modal" aria-hidden="true">Cerrar</button>
-                               
-                              </ul>
-                            </div>
-                        </ul>
-                    </li>
-              </ul>
-            </div>  
-          </div><!--/span-->
+
     </div><!--/row-fluid-->  
   </div><!--/.fluid-container-->  
+
+
+
+  <div id="registrese" data-ng-show="register" class="modal mimodal" tabindex="-1">
+    <div class="modal-header mimodal-header">
+      <button type="button" class="close" ng-click="register=false">×</button>
+     <h3>Crea tu talonario GRATIS</h3>
+              <ul>
+                    <li>Vale por un masaje</li>
+                    <li>Vale por un desayuno en la cama</li>
+                    <li>Vale por un....</li>
+              </ul>
+    </div>
+    <div class="modal-body">
+       <div class="row-fluid"> 
+         <div class="span6" > <a href="/auth/facebook" class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/facebook.png" alt="Entra con Facebook" href="/auth/facebook"/></a></div>
+          <div class="span6" > <a href="/auth/google" class="demo btn btn-success input-block-level"><img class="img-rounded img-responsive img-talon" data-ng-src="img/icons/google.png" alt="Entra con Google" href="/auth/google"/></a></div>
+      </div>
+      
+      
+      <div><a class="btn btn-success input-block-level" href="signup"><b>Crear cuenta</b></a></div>
+
+    </div>
+    <div class="mimodal" ng-click="register=false">
+
+      
+      <div><a class="btn btn-success input-block-level" href="signin"><b>Login</b></a></div>
+
+      <button class="btn btn-success input-block-level" data-dismiss="modal" aria-hidden="true">No quiero crear cuenta!</button>
+    </div>
+  </div>
 
 </section>
